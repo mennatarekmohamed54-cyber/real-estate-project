@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serene Garden | أورا العقارية</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+</head>
+<body>
+
+    <div class="loader" id="loader">
+        <div>
+            <div class="loader-logo">ORA<span>.</span></div>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="../index.html" class="logo">ORA<span>.</span></a>
+            <nav class="nav-links" id="navLinks">
+                <a href="../index.html" data-i18n="home">الرئيسية</a>
+                <a href="../index.html#about" data-i18n="about">عن الشركة</a>
+                <a href="../index.html#properties" data-i18n="properties">العقارات</a>
+                <a href="../news.html" data-i18n="news">الأخبار</a>
+                <a href="../index.html#gallery" data-i18n="gallery">المعرض</a>
+                <a href="../index.html#contact" data-i18n="contact">اتصال</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="lang-btn" id="langBtn">EN</button>
+                <button class="theme-btn" id="themeBtn"><i class="fa-regular fa-moon"></i></button>
+                <button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <section style="padding: 120px 0 70px;">
+        <div class="container">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:start;">
+                <div>
+                    <img style="width:100%; border-radius:var(--radius); box-shadow:var(--shadow);" 
+                         src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=90" alt="Garden" />
+                </div>
+                <div>
+                    <span style="color:var(--secondary); font-weight:600; letter-spacing:2px; font-size:13px;">03 / LANDSCAPE</span>
+                    <h1 style="font-family:'Playfair Display',serif; font-size:2.8rem; margin:12px 0 16px;">Serene Garden</h1>
+                    <p style="color:var(--text-muted); line-height:2; font-size:1.05rem;">مساحات خضراء واسعة بتصميم طبيعي ساحر، مثالية للاسترخاء والاستمتاع بالأجواء الهادئة بعيداً عن صخب المدينة.</p>
+                    <p style="color:var(--text-muted); line-height:2; font-size:1.05rem;">
+                        <strong>التفاصيل:</strong><br />
+                        • مساحة الحديقة: 500 م²<br />
+                        • أشجار ونباتات نادرة<br />
+                        • منطقة جلوس خارجية<br />
+                        • نظام ري حديث
+                    </p>
+                    <div style="margin-top:30px;">
+                        <a href="../index.html#gallery" style="display:inline-block; padding:12px 36px; background:var(--primary); color:#fff; font-weight:700; transition:var(--transition); text-decoration:none;">← العودة للمعرض</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background:#0d0d0d; color:rgba(255,255,255,0.4); padding:24px 0; text-align:center;">
+        <div class="container"><p data-i18n="copyright">© 2026 أورا العقارية - جميع الحقوق محفوظة</p></div>
+    </footer>
+
+    <button class="control-toggle" id="controlToggle"><i class="fa-solid fa-sliders"></i></button>
+    <div class="control-panel" id="controlPanel">
+        <h4><i class="fa-regular fa-pen-to-square"></i> تخصيص المظهر</h4>
+        <div class="control-group">
+            <label>اللون الأساسي <span id="primaryVal">#1a1a2e</span></label>
+            <input type="color" id="primaryColor" value="#1a1a2e" />
+        </div>
+        <div class="control-group">
+            <label>اللون الذهبي <span id="secondaryVal">#c9a87c</span></label>
+            <input type="color" id="secondaryColor" value="#c9a87c" />
+        </div>
+        <div class="control-group">
+            <label>الخلفية <span id="bgVal">#f5f2ed</span></label>
+            <input type="color" id="bgColor" value="#f5f2ed" />
+        </div>
+        <div class="panel-btns">
+            <button class="reset-btn" id="resetColors">إعادة ضبط</button>
+            <button class="close-btn" id="closePanel">إغلاق</button>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+
+</body>
+</html>
