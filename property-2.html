@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>دوبلكس النيل | أورا العقارية</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+</head>
+<body>
+
+    <div class="loader" id="loader">
+        <div>
+            <div class="loader-logo">ORA<span>.</span></div>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="../index.html" class="logo">ORA<span>.</span></a>
+            <nav class="nav-links" id="navLinks">
+                <a href="../index.html" data-i18n="home">الرئيسية</a>
+                <a href="../index.html#about" data-i18n="about">عن الشركة</a>
+                <a href="../index.html#properties" data-i18n="properties">العقارات</a>
+                <a href="../news.html" data-i18n="news">الأخبار</a>
+                <a href="../index.html#gallery" data-i18n="gallery">المعرض</a>
+                <a href="../index.html#contact" data-i18n="contact">اتصال</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="lang-btn" id="langBtn">EN</button>
+                <button class="theme-btn" id="themeBtn"><i class="fa-regular fa-moon"></i></button>
+                <button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <section style="padding: 120px 0 70px;">
+        <div class="container">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:start;">
+                <div>
+                    <a href="gallery-2.html" style="display:block;">
+                        <img style="width:100%; border-radius:var(--radius); box-shadow:var(--shadow);" 
+                             src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=90" alt="Duplex" />
+                    </a>
+                </div>
+                <div>
+                    <h1 style="font-family:'Playfair Display',serif; font-size:2.8rem;" data-i18n="prop2_title">دوبلكس النيل الفاخر</h1>
+                    <div style="font-size:2rem; color:var(--secondary); font-weight:700; margin:12px 0;">$1,500 <small style="font-size:1rem;">/شهر</small></div>
+                    <div style="display:flex; gap:24px; color:var(--text-muted); margin:16px 0; flex-wrap:wrap;">
+                        <span><i class="fa-solid fa-bed"></i> <span data-i18n="bedrooms2">3 غرف</span></span>
+                        <span><i class="fa-solid fa-bath"></i> <span data-i18n="bathrooms2">2 حمامات</span></span>
+                        <span><i class="fa-solid fa-vector-square"></i> 250 م²</span>
+                    </div>
+                    <div style="display:flex; gap:24px; color:var(--text-muted); margin:16px 0; flex-wrap:wrap;">
+                        <span><i class="fa-solid fa-location-dot"></i> <span data-i18n="location2">الزمالك، القاهرة</span></span>
+                        <span><i class="fa-solid fa-tag"></i> <span data-i18n="rent">للإيجار</span></span>
+                    </div>
+                    <p style="color:var(--text-muted); line-height:2; margin:16px 0; font-size:1.05rem;" data-i18n="prop2_desc">دوبلكس فاخر بإطلالة مباشرة على النيل، تشطيب سوبر لوكس، يقع في قلب الزمالك الراقي. يتميز بمساحات واسعة ونوافذ بانورامية تطل على النيل.</p>
+                    <p style="color:var(--text-muted); line-height:2; margin:16px 0; font-size:1.05rem;">
+                        <strong data-i18n="specs2">المواصفات:</strong><br />
+                        <span data-i18n="specs2_1">• مساحة الأرض: 300 م²</span><br />
+                        <span data-i18n="specs2_2">• دورين + سطح خاص</span><br />
+                        <span data-i18n="specs2_3">• تشطيب سوبر لوكس</span><br />
+                        <span data-i18n="specs2_4">• إطلالة بانورامية على النيل</span>
+                    </p>
+                    <div style="margin-top:30px;">
+                        <a href="../index.html#contact" style="display:inline-block; background:var(--secondary); color:#fff; padding:12px 36px; font-weight:700; transition:var(--transition); text-decoration:none; margin-left:10px;" data-i18n="contact_advisor">تواصل مع المستشار</a>
+                        <a href="../index.html#properties" style="display:inline-block; background:var(--primary); color:#fff; padding:12px 36px; font-weight:700; transition:var(--transition); text-decoration:none;">← <span data-i18n="backProperties">العودة للقائمة</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background:#0d0d0d; color:rgba(255,255,255,0.4); padding:24px 0; text-align:center;">
+        <div class="container"><p data-i18n="copyright">© 2026 أورا العقارية - جميع الحقوق محفوظة</p></div>
+    </footer>
+
+    <button class="control-toggle" id="controlToggle"><i class="fa-solid fa-sliders"></i></button>
+    <div class="control-panel" id="controlPanel">
+        <h4><i class="fa-regular fa-pen-to-square"></i> تخصيص المظهر</h4>
+        <div class="control-group">
+            <label>اللون الأساسي <span id="primaryVal">#1a1a2e</span></label>
+            <input type="color" id="primaryColor" value="#1a1a2e" />
+        </div>
+        <div class="control-group">
+            <label>اللون الذهبي <span id="secondaryVal">#c9a87c</span></label>
+            <input type="color" id="secondaryColor" value="#c9a87c" />
+        </div>
+        <div class="control-group">
+            <label>الخلفية <span id="bgVal">#f5f2ed</span></label>
+            <input type="color" id="bgColor" value="#f5f2ed" />
+        </div>
+        <div class="panel-btns">
+            <button class="reset-btn" id="resetColors">إعادة ضبط</button>
+            <button class="close-btn" id="closePanel">إغلاق</button>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+
+    <script>
+        const extraTranslations = {
+            ar: {
+                prop2_title: "دوبلكس النيل الفاخر",
+                bedrooms2: "3 غرف",
+                bathrooms2: "2 حمامات",
+                location2: "الزمالك، القاهرة",
+                rent: "للإيجار",
+                prop2_desc: "دوبلكس فاخر بإطلالة مباشرة على النيل، تشطيب سوبر لوكس، يقع في قلب الزمالك الراقي. يتميز بمساحات واسعة ونوافذ بانورامية تطل على النيل.",
+                specs2: "المواصفات:",
+                specs2_1: "• مساحة الأرض: 300 م²",
+                specs2_2: "• دورين + سطح خاص",
+                specs2_3: "• تشطيب سوبر لوكس",
+                specs2_4: "• إطلالة بانورامية على النيل",
+                contact_advisor: "تواصل مع المستشار",
+                backProperties: "العودة للقائمة",
+                copyright: "© 2026 أورا العقارية - جميع الحقوق محفوظة"
+            },
+            en: {
+                prop2_title: "Nile Luxury Duplex",
+                bedrooms2: "3 Bedrooms",
+                bathrooms2: "2 Bathrooms",
+                location2: "Zamalek, Cairo",
+                rent: "For Rent",
+                prop2_desc: "A luxurious duplex with a direct view of the Nile, super luxury finishing, located in the heart of upscale Zamalek. It features spacious areas and panoramic windows overlooking the Nile.",
+                specs2: "Specifications:",
+                specs2_1: "• Land area: 300 m²",
+                specs2_2: "• Two floors + private roof",
+                specs2_3: "• Super luxury finishing",
+                specs2_4: "• Panoramic Nile view",
+                contact_advisor: "Contact Advisor",
+                backProperties: "Back to List",
+                copyright: "© 2026 Ora Real Estate - All Rights Reserved"
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof translations !== 'undefined') {
+                for (let lang in extraTranslations) {
+                    if (translations[lang]) {
+                        Object.assign(translations[lang], extraTranslations[lang]);
+                    }
+                }
+            }
+            const currentLang = localStorage.getItem('ora-lang') || 'ar';
+            if (typeof applyLanguage === 'function') {
+                applyLanguage(currentLang);
+            }
+        });
+    </script>
+
+</body>
+</html>

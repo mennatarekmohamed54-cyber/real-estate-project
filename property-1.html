@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فيلا البستان | أورا العقارية</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+</head>
+<body>
+
+    <!-- LOADER -->
+    <div class="loader" id="loader">
+        <div>
+            <div class="loader-logo">ORA<span>.</span></div>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="../index.html" class="logo">ORA<span>.</span></a>
+            <nav class="nav-links" id="navLinks">
+                <a href="../index.html" data-i18n="home">الرئيسية</a>
+                <a href="../index.html#about" data-i18n="about">عن الشركة</a>
+                <a href="../index.html#properties" data-i18n="properties">العقارات</a>
+                <a href="../news.html" data-i18n="news">الأخبار</a>
+                <a href="../index.html#gallery" data-i18n="gallery">المعرض</a>
+                <a href="../index.html#contact" data-i18n="contact">اتصال</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="lang-btn" id="langBtn">EN</button>
+                <button class="theme-btn" id="themeBtn"><i class="fa-regular fa-moon"></i></button>
+                <button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- محتوى الصفحة (يتغير حسب كل صفحة) -->
+    <section style="padding: 120px 0 70px;">
+        <div class="container">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:start;">
+                <div>
+                    <img style="width:100%; border-radius:var(--radius); box-shadow:var(--shadow);" 
+                         src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=90" alt="Villa" />
+                </div>
+                <div>
+                    <h1 style="font-family:'Playfair Display',serif; font-size:2.8rem;">فيلا البستان الفاخرة</h1>
+                    <div style="font-size:2rem; color:var(--secondary); font-weight:700; margin:12px 0;">$480,000</div>
+                    <div style="display:flex; gap:24px; color:var(--text-muted); margin:16px 0; flex-wrap:wrap;">
+                        <span><i class="fa-solid fa-bed"></i> 5 غرف</span>
+                        <span><i class="fa-solid fa-bath"></i> 4 حمامات</span>
+                        <span><i class="fa-solid fa-vector-square"></i> 400 م²</span>
+                    </div>
+                    <div style="display:flex; gap:24px; color:var(--text-muted); margin:16px 0; flex-wrap:wrap;">
+                        <span><i class="fa-solid fa-location-dot"></i> التجمع الخامس، القاهرة</span>
+                        <span><i class="fa-solid fa-tag"></i> للبيع</span>
+                    </div>
+                    <p style="color:var(--text-muted); line-height:2; margin:16px 0; font-size:1.05rem;">فيلا عصرية فاخرة بحديقة خاصة ومسبح لا نهائي. تتميز بواجهة زجاجية وتشطيب سوبر لوكس. تقع في قلب التجمع الخامس قريبة من المدارس والجامعات.</p>
+                    <p style="color:var(--text-muted); line-height:2; margin:16px 0; font-size:1.05rem;">
+                        <strong>المواصفات:</strong><br />
+                        • مساحة الأرض: 600 م²<br />
+                        • دورين + روف<br />
+                        • نظام تقسيط مرن
+                    </p>
+                    <div style="margin-top:30px;">
+                        <a href="../index.html#contact" style="display:inline-block; background:var(--secondary); color:#fff; padding:12px 36px; font-weight:700; transition:var(--transition); text-decoration:none; margin-left:10px;">تواصل مع المستشار</a>
+                        <a href="../index.html#properties" style="display:inline-block; background:var(--primary); color:#fff; padding:12px 36px; font-weight:700; transition:var(--transition); text-decoration:none;">← العودة للقائمة</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="background:#0d0d0d; color:rgba(255,255,255,0.4); padding:24px 0; text-align:center;">
+        <div class="container"><p data-i18n="copyright">© 2026 أورا العقارية - جميع الحقوق محفوظة</p></div>
+    </footer>
+
+    <!-- CONTROL PANEL -->
+    <button class="control-toggle" id="controlToggle"><i class="fa-solid fa-sliders"></i></button>
+    <div class="control-panel" id="controlPanel">
+        <h4><i class="fa-regular fa-pen-to-square"></i> تخصيص المظهر</h4>
+        <div class="control-group">
+            <label>اللون الأساسي <span id="primaryVal">#1a1a2e</span></label>
+            <input type="color" id="primaryColor" value="#1a1a2e" />
+        </div>
+        <div class="control-group">
+            <label>اللون الذهبي <span id="secondaryVal">#c9a87c</span></label>
+            <input type="color" id="secondaryColor" value="#c9a87c" />
+        </div>
+        <div class="control-group">
+            <label>الخلفية <span id="bgVal">#f5f2ed</span></label>
+            <input type="color" id="bgColor" value="#f5f2ed" />
+        </div>
+        <div class="panel-btns">
+            <button class="reset-btn" id="resetColors">إعادة ضبط</button>
+            <button class="close-btn" id="closePanel">إغلاق</button>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+
+    <!-- بيانات الترجمة الخاصة بالصفحة -->
+    <script>
+        const extraTranslations = {
+            ar: {
+                // أضيفي هنا الترجمة الخاصة بكل صفحة
+            },
+            en: {
+                // أضيفي هنا الترجمة الخاصة بكل صفحة
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof translations !== 'undefined') {
+                for (let lang in extraTranslations) {
+                    if (translations[lang]) {
+                        Object.assign(translations[lang], extraTranslations[lang]);
+                    }
+                }
+            }
+            const currentLang = localStorage.getItem('ora-lang') || 'ar';
+            if (typeof applyLanguage === 'function') {
+                applyLanguage(currentLang);
+            }
+        });
+    </script>
+
+</body>
+</html>

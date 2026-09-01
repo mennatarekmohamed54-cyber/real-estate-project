@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>دليلك الشامل | أورا العقارية</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+</head>
+<body>
+
+    <div class="loader" id="loader">
+        <div>
+            <div class="loader-logo">ORA<span>.</span></div>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="../index.html" class="logo">ORA<span>.</span></a>
+            <nav class="nav-links" id="navLinks">
+                <a href="../index.html" data-i18n="home">الرئيسية</a>
+                <a href="../index.html#about" data-i18n="about">عن الشركة</a>
+                <a href="../index.html#properties" data-i18n="properties">العقارات</a>
+                <a href="../news.html" data-i18n="news">الأخبار</a>
+                <a href="../index.html#gallery" data-i18n="gallery">المعرض</a>
+                <a href="../index.html#contact" data-i18n="contact">اتصال</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="lang-btn" id="langBtn">EN</button>
+                <button class="theme-btn" id="themeBtn"><i class="fa-regular fa-moon"></i></button>
+                <button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <section style="padding: 120px 0 70px;">
+        <div class="container">
+            <img style="width:100%; max-height:500px; object-fit:cover; border-radius:var(--radius); box-shadow:var(--shadow); margin-bottom:30px;" 
+                 src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=90" alt="News" />
+            <div style="color:var(--secondary); font-size:13px; font-weight:600; letter-spacing:1px;">23 أغسطس 2026</div>
+            <h1 style="font-family:'Playfair Display',serif; font-size:2.8rem; margin:12px 0 20px;" data-i18n="news3_title">دليلك الشامل لتجنب أخطاء شراء أول عقار</h1>
+            <div style="color:var(--text-muted); font-size:1.05rem; line-height:2.2;" data-i18n="news3_content">
+                <p>نقدم لك دليلك الشامل لتجنب الأخطاء الشائعة عند شراء أول عقار، بناءً على خبرة 28 عاماً في السوق العقاري المصري.</p>
+                <p><strong>1. اختيار الموقع المناسب:</strong> يعتبر الموقع من أهم العوامل التي تحدد قيمة العقار، لذا يجب اختيار منطقة ذات خدمات متكاملة وقريبة من وسائل النقل.</p>
+                <p><strong>2. تقييم العقار بشكل صحيح:</strong> تأكد من فحص العقار بدقة، والاستعانة بخبير لتقييم حالته الإنشائية والكهربائية والسباكة.</p>
+                <p><strong>3. الاستعانة بمستشار عقاري موثوق:</strong> التعامل مع شركة عقارية موثوقة يضمن لك حقوقك ويسهل إجراءات الشراء.</p>
+                <p><strong>4. فهم عقود البيع:</strong> اقرأ العقد بعناية، وتأكد من فهم كل البنود، خاصة المتعلقة بالدفع والتسليم والضمانات.</p>
+                <p><strong>5. التفاوض على السعر:</strong> لا تتردد في التفاوض للحصول على أفضل سعر، مع مراعاة أسعار السوق المحيطة.</p>
+                <p>باتباع هذه النصائح، ستتمكن من شراء عقارك الأول بثقة وأمان.</p>
+            </div>
+            <a href="../news.html" style="display:inline-block; padding:12px 36px; background:var(--primary); color:#fff; font-weight:700; transition:var(--transition); text-decoration:none; margin-top:30px;" data-i18n="backNews">← العودة للأخبار</a>
+        </div>
+    </section>
+
+    <footer style="background:#0d0d0d; color:rgba(255,255,255,0.4); padding:24px 0; text-align:center;">
+        <div class="container"><p data-i18n="copyright">© 2026 أورا العقارية - جميع الحقوق محفوظة</p></div>
+    </footer>
+
+    <button class="control-toggle" id="controlToggle"><i class="fa-solid fa-sliders"></i></button>
+    <div class="control-panel" id="controlPanel">
+        <h4><i class="fa-regular fa-pen-to-square"></i> تخصيص المظهر</h4>
+        <div class="control-group">
+            <label>اللون الأساسي <span id="primaryVal">#1a1a2e</span></label>
+            <input type="color" id="primaryColor" value="#1a1a2e" />
+        </div>
+        <div class="control-group">
+            <label>اللون الذهبي <span id="secondaryVal">#c9a87c</span></label>
+            <input type="color" id="secondaryColor" value="#c9a87c" />
+        </div>
+        <div class="control-group">
+            <label>الخلفية <span id="bgVal">#f5f2ed</span></label>
+            <input type="color" id="bgColor" value="#f5f2ed" />
+        </div>
+        <div class="panel-btns">
+            <button class="reset-btn" id="resetColors">إعادة ضبط</button>
+            <button class="close-btn" id="closePanel">إغلاق</button>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+
+    <script>
+        const extraTranslations = {
+            ar: {
+                news3_title: "دليلك الشامل لتجنب أخطاء شراء أول عقار",
+                news3_content: `<p>نقدم لك دليلك الشامل لتجنب الأخطاء الشائعة عند شراء أول عقار، بناءً على خبرة 28 عاماً في السوق العقاري المصري.</p><p><strong>1. اختيار الموقع المناسب:</strong> يعتبر الموقع من أهم العوامل التي تحدد قيمة العقار، لذا يجب اختيار منطقة ذات خدمات متكاملة وقريبة من وسائل النقل.</p><p><strong>2. تقييم العقار بشكل صحيح:</strong> تأكد من فحص العقار بدقة، والاستعانة بخبير لتقييم حالته الإنشائية والكهربائية والسباكة.</p><p><strong>3. الاستعانة بمستشار عقاري موثوق:</strong> التعامل مع شركة عقارية موثوقة يضمن لك حقوقك ويسهل إجراءات الشراء.</p><p><strong>4. فهم عقود البيع:</strong> اقرأ العقد بعناية، وتأكد من فهم كل البنود، خاصة المتعلقة بالدفع والتسليم والضمانات.</p><p><strong>5. التفاوض على السعر:</strong> لا تتردد في التفاوض للحصول على أفضل سعر، مع مراعاة أسعار السوق المحيطة.</p><p>باتباع هذه النصائح، ستتمكن من شراء عقارك الأول بثقة وأمان.</p>`,
+                backNews: "العودة للأخبار",
+                copyright: "© 2026 أورا العقارية - جميع الحقوق محفوظة"
+            },
+            en: {
+                news3_title: "Your comprehensive guide to avoiding first property buying mistakes",
+                news3_content: `<p>We present your comprehensive guide to avoiding common mistakes when buying your first property, based on 28 years of experience in the Egyptian real estate market.</p><p><strong>1. Choosing the right location:</strong> Location is one of the most important factors determining property value, so choose an area with integrated services and close to transportation.</p><p><strong>2. Proper property evaluation:</strong> Ensure thorough inspection of the property, and seek an expert to assess its structural, electrical, and plumbing conditions.</p><p><strong>3. Using a trusted real estate consultant:</strong> Dealing with a reputable real estate company protects your rights and simplifies the purchase process.</p><p><strong>4. Understanding sales contracts:</strong> Read the contract carefully, and ensure you understand all clauses, especially those related to payment, delivery, and warranties.</p><p><strong>5. Negotiating the price:</strong> Don't hesitate to negotiate for the best price, considering surrounding market rates.</p><p>By following these tips, you can buy your first property with confidence and security.</p>`,
+                backNews: "Back to News",
+                copyright: "© 2026 Ora Real Estate - All Rights Reserved"
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof translations !== 'undefined') {
+                for (let lang in extraTranslations) {
+                    if (translations[lang]) {
+                        Object.assign(translations[lang], extraTranslations[lang]);
+                    }
+                }
+            }
+            const currentLang = localStorage.getItem('ora-lang') || 'ar';
+            if (typeof applyLanguage === 'function') {
+                applyLanguage(currentLang);
+            }
+        });
+    </script>
+
+</body>
+</html>

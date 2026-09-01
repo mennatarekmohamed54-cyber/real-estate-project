@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>افتتاح مشروع سكني | أورا العقارية</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+</head>
+<body>
+
+    <div class="loader" id="loader">
+        <div>
+            <div class="loader-logo">ORA<span>.</span></div>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="../index.html" class="logo">ORA<span>.</span></a>
+            <nav class="nav-links" id="navLinks">
+                <a href="../index.html" data-i18n="home">الرئيسية</a>
+                <a href="../index.html#about" data-i18n="about">عن الشركة</a>
+                <a href="../index.html#properties" data-i18n="properties">العقارات</a>
+                <a href="../news.html" data-i18n="news">الأخبار</a>
+                <a href="../index.html#gallery" data-i18n="gallery">المعرض</a>
+                <a href="../index.html#contact" data-i18n="contact">اتصال</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="lang-btn" id="langBtn">EN</button>
+                <button class="theme-btn" id="themeBtn"><i class="fa-regular fa-moon"></i></button>
+                <button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <section style="padding: 120px 0 70px;">
+        <div class="container">
+            <img style="width:100%; max-height:500px; object-fit:cover; border-radius:var(--radius); box-shadow:var(--shadow); margin-bottom:30px;" 
+                 src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=90" alt="News" />
+            <div style="color:var(--secondary); font-size:13px; font-weight:600; letter-spacing:1px;">24 أغسطس 2026</div>
+            <h1 style="font-family:'Playfair Display',serif; font-size:2.8rem; margin:12px 0 20px;" data-i18n="news2_title">افتتاح مشروع سكني ضخم في العاصمة الإدارية</h1>
+            <div style="color:var(--text-muted); font-size:1.05rem; line-height:2.2;" data-i18n="news2_content">
+                <p>أعلنت شركة "أورا" للعقارات عن افتتاح مشروع سكني ضخم في العاصمة الإدارية الجديدة، يضم أكثر من 2000 وحدة سكنية بمساحات متنوعة تبدأ من 80 متراً مربعاً.</p>
+                <p>ويعد المشروع الأكبر من نوعه في المنطقة، حيث يقدم خدمات متكاملة تشمل مدارس دولية، مستشفى متكامل، ومراكز تجارية ضخمة، مع تصميمات معمارية مستوحاة من الطراز الأوروبي الحديث.</p>
+                <p>صرح المهندس أحمد رشاد، الرئيس التنفيذي للشركة، بأن المشروع سيتم تنفيذه على 3 مراحل، مع نظام تقسيط مرن يصل إلى 10 سنوات، وبأسعار تنافسية تبدأ من 1.2 مليون جنيه للوحدة.</p>
+                <p>ومن المتوقع أن يبدأ التسليم في الربع الأول من عام 2028، مع إمكانية الحجز المسبق للحصول على خصومات تصل إلى 15%.</p>
+            </div>
+            <a href="../news.html" style="display:inline-block; padding:12px 36px; background:var(--primary); color:#fff; font-weight:700; transition:var(--transition); text-decoration:none; margin-top:30px;" data-i18n="backNews">← العودة للأخبار</a>
+        </div>
+    </section>
+
+    <footer style="background:#0d0d0d; color:rgba(255,255,255,0.4); padding:24px 0; text-align:center;">
+        <div class="container"><p data-i18n="copyright">© 2026 أورا العقارية - جميع الحقوق محفوظة</p></div>
+    </footer>
+
+    <button class="control-toggle" id="controlToggle"><i class="fa-solid fa-sliders"></i></button>
+    <div class="control-panel" id="controlPanel">
+        <h4><i class="fa-regular fa-pen-to-square"></i> تخصيص المظهر</h4>
+        <div class="control-group">
+            <label>اللون الأساسي <span id="primaryVal">#1a1a2e</span></label>
+            <input type="color" id="primaryColor" value="#1a1a2e" />
+        </div>
+        <div class="control-group">
+            <label>اللون الذهبي <span id="secondaryVal">#c9a87c</span></label>
+            <input type="color" id="secondaryColor" value="#c9a87c" />
+        </div>
+        <div class="control-group">
+            <label>الخلفية <span id="bgVal">#f5f2ed</span></label>
+            <input type="color" id="bgColor" value="#f5f2ed" />
+        </div>
+        <div class="panel-btns">
+            <button class="reset-btn" id="resetColors">إعادة ضبط</button>
+            <button class="close-btn" id="closePanel">إغلاق</button>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+
+    <script>
+        const extraTranslations = {
+            ar: {
+                news2_title: "افتتاح مشروع سكني ضخم في العاصمة الإدارية",
+                news2_content: `<p>أعلنت شركة "أورا" للعقارات عن افتتاح مشروع سكني ضخم في العاصمة الإدارية الجديدة، يضم أكثر من 2000 وحدة سكنية بمساحات متنوعة تبدأ من 80 متراً مربعاً.</p><p>ويعد المشروع الأكبر من نوعه في المنطقة، حيث يقدم خدمات متكاملة تشمل مدارس دولية، مستشفى متكامل، ومراكز تجارية ضخمة، مع تصميمات معمارية مستوحاة من الطراز الأوروبي الحديث.</p><p>صرح المهندس أحمد رشاد، الرئيس التنفيذي للشركة، بأن المشروع سيتم تنفيذه على 3 مراحل، مع نظام تقسيط مرن يصل إلى 10 سنوات، وبأسعار تنافسية تبدأ من 1.2 مليون جنيه للوحدة.</p><p>ومن المتوقع أن يبدأ التسليم في الربع الأول من عام 2028، مع إمكانية الحجز المسبق للحصول على خصومات تصل إلى 15%.</p>`,
+                backNews: "العودة للأخبار",
+                copyright: "© 2026 أورا العقارية - جميع الحقوق محفوظة"
+            },
+            en: {
+                news2_title: "Major residential project launched in the New Capital",
+                news2_content: `<p>Ora Real Estate has announced the launch of a major residential project in the New Administrative Capital, comprising over 2,000 residential units with various sizes starting from 80 square meters.</p><p>The project is the largest of its kind in the region, offering integrated services including international schools, a fully equipped hospital, and huge commercial centers, with architectural designs inspired by modern European style.</p><p>Engineer Ahmed Rashad, CEO of the company, stated that the project will be implemented in 3 phases, with a flexible installment system extending up to 10 years, and competitive prices starting from 1.2 million EGP per unit.</p><p>Delivery is expected to begin in the first quarter of 2028, with early booking discounts of up to 15%.</p>`,
+                backNews: "Back to News",
+                copyright: "© 2026 Ora Real Estate - All Rights Reserved"
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof translations !== 'undefined') {
+                for (let lang in extraTranslations) {
+                    if (translations[lang]) {
+                        Object.assign(translations[lang], extraTranslations[lang]);
+                    }
+                }
+            }
+            const currentLang = localStorage.getItem('ora-lang') || 'ar';
+            if (typeof applyLanguage === 'function') {
+                applyLanguage(currentLang);
+            }
+        });
+    </script>
+
+</body>
+</html>
