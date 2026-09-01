@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>أورا العقارية | الفخامة الخالدة</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body>
+
+    <!-- LOADER -->
+    <div class="loader" id="loader">
+        <div>
+            <div class="loader-logo">ORA<span>.</span></div>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="logo">ORA<span>.</span></a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" data-i18n="home">الرئيسية</a>
+                <a href="#about" data-i18n="about">عن الشركة</a>
+                <a href="#properties" data-i18n="properties">العقارات</a>
+                <a href="news.html" data-i18n="news">الأخبار</a>
+                <a href="#gallery" data-i18n="gallery">المعرض</a>
+                <a href="#contact" data-i18n="contact">اتصال</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="lang-btn" id="langBtn">EN</button>
+                <button class="theme-btn" id="themeBtn"><i class="fa-regular fa-moon"></i></button>
+                <button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <img class="hero-bg" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2000&q=90" alt="Hero" />
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="badge" data-i18n="heroBadge">LUXURY LIVING</div>
+                <h1>
+                    <span data-i18n="heroDiscover">اكتشف</span>
+                    <span data-i18n="heroDream">منزل أحلامك</span>
+                </h1>
+                <p data-i18n="heroDesc">أرقى الوحدات السكنية والتجارية في قلب العاصمة، بتصميمات استثنائية وتجربة عقارية لا تُنسى.</p>
+                <div class="hero-btns">
+                    <a href="#properties" class="btn-primary" data-i18n="heroBtn">استكشف العقارات</a>
+                    <a href="#contact" class="btn-outline" data-i18n="contactBtn">تواصل معنا</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1000&q=90" alt="Luxury Property" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="reveal">
+                    <img class="about-img" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=90" alt="About" />
+                </div>
+                <div class="about-text reveal">
+                    <span class="section-tag" data-i18n="aboutTag">قصتنا</span>
+                    <h2 class="section-title" data-i18n="aboutTitle">نبني <span>المستقبل</span> بأيدي الخبراء</h2>
+                    <p data-i18n="aboutDesc">أورا للعقارات هي صرح من النزاهة والجودة، نقدم حلولاً سكنية واستثمارية تلبي تطلعاتكم وتجمع بين التصميم الراقي والموقع المثالي في قلب القاهرة.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="num counter" data-target="28">0</div>
+                            <div class="label" data-i18n="years">سنة خبرة</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="num counter" data-target="1350">0</div>
+                            <div class="label" data-i18n="clients">عميل سعيد</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="num counter" data-target="97">0</div>
+                            <div class="label" data-i18n="satisfaction">% رضا</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROPERTIES -->
+    <section class="section properties" id="properties">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-tag" data-i18n="propertiesTag">أحدث العروض</span>
+                <h2 class="section-title" data-i18n="propertiesTitle">عقارات <span>مميزة</span></h2>
+                <p class="section-desc" data-i18n="propertiesDesc">مجموعة مختارة من أفضل الوحدات بأسعار تنافسية وتصميمات فاخرة.</p>
+            </div>
+            <div class="property-grid">
+                <div class="property-card reveal">
+                    <a href="pages/property-1.html">
+                        <div class="img-wrap">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=90" alt="Villa" />
+                            <span class="badge-status gold" data-i18n="sale">للبيع</span>
+                        </div>
+                        <div class="body">
+                            <h3 data-i18n="p1_name">فيلا البستان</h3>
+                            <div class="location"><i class="fa-solid fa-location-dot"></i> التجمع الخامس</div>
+                            <div class="meta">
+                                <span><i class="fa-solid fa-bed"></i> 5</span>
+                                <span><i class="fa-solid fa-bath"></i> 4</span>
+                                <span><i class="fa-solid fa-vector-square"></i> 400 م²</span>
+                            </div>
+                            <div class="price">$480,000</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="property-card reveal">
+                    <a href="pages/property-2.html">
+                        <div class="img-wrap">
+                            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=90" alt="Duplex" />
+                            <span class="badge-status" data-i18n="rent">للإيجار</span>
+                        </div>
+                        <div class="body">
+                            <h3 data-i18n="p2_name">دوبلكس النيل</h3>
+                            <div class="location"><i class="fa-solid fa-location-dot"></i> الزمالك</div>
+                            <div class="meta">
+                                <span><i class="fa-solid fa-bed"></i> 3</span>
+                                <span><i class="fa-solid fa-bath"></i> 2</span>
+                                <span><i class="fa-solid fa-vector-square"></i> 250 م²</span>
+                            </div>
+                            <div class="price">$1,500 <small style="font-size:0.8rem;">/شهر</small></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="property-card reveal">
+                    <a href="pages/property-3.html">
+                        <div class="img-wrap">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=90" alt="Land" />
+                            <span class="badge-status gold" data-i18n="investment">استثماري</span>
+                        </div>
+                        <div class="body">
+                            <h3 data-i18n="p3_name">أرض العاصمة</h3>
+                            <div class="location"><i class="fa-solid fa-location-dot"></i> العاصمة الإدارية</div>
+                            <div class="meta">
+                                <span><i class="fa-solid fa-vector-square"></i> 1200 م²</span>
+                                <span><i class="fa-solid fa-building"></i> تجاري</span>
+                            </div>
+                            <div class="price">$2,200,000</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="section" style="background: var(--bg);">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-tag">لماذا نحن</span>
+                <h2 class="section-title">خبرة <span>تتحدث</span> عن نفسها</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-item reveal">
+                    <div class="icon"><i class="fa-regular fa-clock"></i></div>
+                    <h4>خبرة 28 عام</h4>
+                    <p>نفهم السوق ونتوقع اتجاهاته بدقة.</p>
+                </div>
+                <div class="why-item reveal">
+                    <div class="icon"><i class="fa-regular fa-handshake"></i></div>
+                    <h4>ثقة العملاء</h4>
+                    <p>أكثر من 1350 عميلاً وثقوا بنا.</p>
+                </div>
+                <div class="why-item reveal">
+                    <div class="icon"><i class="fa-regular fa-building"></i></div>
+                    <h4>تصاميم فاخرة</h4>
+                    <p>شراكات مع أفضل مكاتب الهندسة المعمارية.</p>
+                </div>
+                <div class="why-item reveal">
+                    <div class="icon"><i class="fa-regular fa-circle-check"></i></div>
+                    <h4>دعم متواصل</h4>
+                    <p>نحن معك من التوقيع حتى التسليم.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section" id="gallery">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-tag" data-i18n="galleryTag">إبداع معماري</span>
+                <h2 class="section-title" data-i18n="galleryTitle">معرض <span>المشاريع</span></h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="item reveal">
+                    <a href="pages/gallery-1.html">
+                        <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=800&q=90" alt="Interior" />
+                        <div class="overlay"><span>تصميم داخلي فاخر</span></div>
+                    </a>
+                </div>
+                <div class="item reveal">
+                    <a href="pages/gallery-2.html">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=90" alt="Villa" />
+                        <div class="overlay"><span>فيلا عصرية</span></div>
+                    </a>
+                </div>
+                <div class="item reveal">
+                    <a href="pages/gallery-3.html">
+                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=90" alt="Garden" />
+                        <div class="overlay"><span>مناظر طبيعية</span></div>
+                    </a>
+                </div>
+                <div class="item reveal">
+                    <a href="pages/gallery-4.html">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=90" alt="Architecture" />
+                        <div class="overlay"><span>هندسة معمارية</span></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWS -->
+    <section class="section" id="news" style="background: var(--bg);">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-tag" data-i18n="newsTag">آخر المستجدات</span>
+                <h2 class="section-title" data-i18n="newsTitle">أخبار <span>السوق</span></h2>
+            </div>
+            <div class="news-grid">
+                <div class="news-card reveal">
+                    <div class="img-wrap">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=90" alt="News" />
+                    </div>
+                    <div class="body">
+                        <div class="date">25 أغسطس 2026</div>
+                        <h4 data-i18n="news1">انخفاض الفائدة يزيد الطلب على الوحدات السكنية</h4>
+                        <a href="pages/news-1.html">اقرأ المزيد <i class="fa-solid fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                <div class="news-card reveal">
+                    <div class="img-wrap">
+                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=90" alt="News" />
+                    </div>
+                    <div class="body">
+                        <div class="date">24 أغسطس 2026</div>
+                        <h4 data-i18n="news2">افتتاح مشروع سكني ضخم في العاصمة الإدارية</h4>
+                        <a href="pages/news-2.html">اقرأ المزيد <i class="fa-solid fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                <div class="news-card reveal">
+                    <div class="img-wrap">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=90" alt="News" />
+                    </div>
+                    <div class="body">
+                        <div class="date">23 أغسطس 2026</div>
+                        <h4 data-i18n="news3">دليلك الشامل لتجنب أخطاء شراء أول عقار</h4>
+                        <a href="pages/news-3.html">اقرأ المزيد <i class="fa-solid fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:40px;">
+                <a href="news.html" class="btn-primary" data-i18n="allNews">عرض جميع الأخبار</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <span class="section-tag" data-i18n="contactTag">تواصل مع خبرائنا</span>
+                    <h2 class="section-title" data-i18n="contactTitle">احجز استشارتك <span>المجانية</span></h2>
+                    <p style="color:var(--text-muted); line-height:2; font-weight:300;" data-i18n="contactDesc">فريق من المستشارين المتخصصين على أتم الاستعداد لمساعدتك في اختيار العقار المثالي وفقاً لاحتياجاتك.</p>
+                    <div class="item">
+                        <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                        <div>+20 100 000 0000</div>
+                    </div>
+                    <div class="item">
+                        <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>info@ora.com</div>
+                    </div>
+                    <div class="item">
+                        <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div data-i18n="address">مصر الجديدة - القاهرة</div>
+                    </div>
+                </div>
+                <div class="contact-form reveal">
+                    <input type="text" placeholder="الاسم بالكامل" data-i18n-placeholder="namePlaceholder" />
+                    <input type="email" placeholder="البريد الإلكتروني" data-i18n-placeholder="emailPlaceholder" />
+                    <textarea rows="5" placeholder="رسالتك" data-i18n-placeholder="messagePlaceholder"></textarea>
+                    <button data-i18n="sendBtn">إرسال طلب الاستشارة <i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <span class="section-tag" style="color:var(--secondary);" data-i18n="ctaTag">اكتشف المزيد</span>
+            <h2 class="section-title" data-i18n="ctaTitle">هل تبحث عن المزيد من الخيارات؟</h2>
+            <p data-i18n="ctaDesc">تصفح قائمة كاملة بجميع العقارات المتاحة لدينا بكل التفاصيل والأسعار.</p>
+            <a href="pages/all-properties.html" class="btn-primary" data-i18n="ctaBtn">عرض جميع العقارات</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo">ORA<span>.</span></div>
+                    <p style="margin-top:12px; max-width:300px; font-weight:300;">شريكك الموثوق في عالم العقارات الفاخرة، نبني الثقة ونسلم المستقبل.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 data-i18n="footerLinks">روابط</h4>
+                    <a href="#home" data-i18n="home">الرئيسية</a>
+                    <a href="#about" data-i18n="about">عن الشركة</a>
+                    <a href="#properties" data-i18n="properties">العقارات</a>
+                </div>
+                <div>
+                    <h4 data-i18n="footerSupport">الدعم</h4>
+                    <a href="#contact">اتصل بنا</a>
+                    <a href="#">الأسئلة الشائعة</a>
+                </div>
+                <div>
+                    <h4 data-i18n="footerContact">اتصل بنا</h4>
+                    <a href="#">+20 100 000 0000</a>
+                    <a href="#">info@ora.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom" data-i18n="copyright">© 2026 أورا العقارية - جميع الحقوق محفوظة</div>
+        </div>
+    </footer>
+
+    <!-- CONTROL PANEL -->
+    <button class="control-toggle" id="controlToggle"><i class="fa-solid fa-sliders"></i></button>
+    <div class="control-panel" id="controlPanel">
+        <h4><i class="fa-regular fa-pen-to-square"></i> تخصيص المظهر</h4>
+        <div class="control-group">
+            <label>اللون الأساسي <span id="primaryVal">#1a1a2e</span></label>
+            <input type="color" id="primaryColor" value="#1a1a2e" />
+        </div>
+        <div class="control-group">
+            <label>اللون الذهبي <span id="secondaryVal">#c9a87c</span></label>
+            <input type="color" id="secondaryColor" value="#c9a87c" />
+        </div>
+        <div class="control-group">
+            <label>الخلفية <span id="bgVal">#f5f2ed</span></label>
+            <input type="color" id="bgColor" value="#f5f2ed" />
+        </div>
+        <div class="panel-btns">
+            <button class="reset-btn" id="resetColors">إعادة ضبط</button>
+            <button class="close-btn" id="closePanel">إغلاق</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

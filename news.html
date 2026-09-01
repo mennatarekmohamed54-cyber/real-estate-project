@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>جميع الأخبار | أورا العقارية</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body>
+
+    <!-- LOADER -->
+    <div class="loader" id="loader">
+        <div>
+            <div class="loader-logo">ORA<span>.</span></div>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="logo">ORA<span>.</span></a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" data-i18n="home">الرئيسية</a>
+                <a href="index.html#about" data-i18n="about">عن الشركة</a>
+                <a href="index.html#properties" data-i18n="properties">العقارات</a>
+                <a href="news.html" data-i18n="news">الأخبار</a>
+                <a href="index.html#gallery" data-i18n="gallery">المعرض</a>
+                <a href="index.html#contact" data-i18n="contact">اتصال</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="lang-btn" id="langBtn">EN</button>
+                <button class="theme-btn" id="themeBtn"><i class="fa-regular fa-moon"></i></button>
+                <button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== جميع الأخبار ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-tag" data-i18n="newsTag">آخر المستجدات</span>
+                <h2 class="section-title" data-i18n="newsTitle">جميع <span>الأخبار</span></h2>
+                <p style="color:var(--text-muted); max-width:600px; margin:10px auto 0;" data-i18n="newsDesc">تابع أحدث أخبار السوق العقاري ونصائح الخبراء.</p>
+            </div>
+
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="img-wrap">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=90" alt="News" />
+                    </div>
+                    <div class="body">
+                        <div class="date">25 أغسطس 2026</div>
+                        <h4 data-i18n="news1">انخفاض الفائدة يزيد الطلب على الوحدات السكنية</h4>
+                        <a href="pages/news-1.html">اقرأ المزيد <i class="fa-solid fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="img-wrap">
+                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=90" alt="News" />
+                    </div>
+                    <div class="body">
+                        <div class="date">24 أغسطس 2026</div>
+                        <h4 data-i18n="news2">افتتاح مشروع سكني ضخم في العاصمة الإدارية</h4>
+                        <a href="pages/news-2.html">اقرأ المزيد <i class="fa-solid fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="img-wrap">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=90" alt="News" />
+                    </div>
+                    <div class="body">
+                        <div class="date">23 أغسطس 2026</div>
+                        <h4 data-i18n="news3">دليلك الشامل لتجنب أخطاء شراء أول عقار</h4>
+                        <a href="pages/news-3.html">اقرأ المزيد <i class="fa-solid fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align:center; margin-top:40px;">
+                <a href="index.html" style="display:inline-block; padding:14px 40px; background:var(--primary); color:#fff; font-weight:700; transition:var(--transition); text-decoration:none;" data-i18n="backHome">← العودة للرئيسية</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo">ORA<span>.</span></div>
+                    <p style="margin-top:12px; max-width:300px; font-weight:300;">شريكك الموثوق في عالم العقارات الفاخرة، نبني الثقة ونسلم المستقبل.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 data-i18n="footerLinks">روابط</h4>
+                    <a href="index.html" data-i18n="home">الرئيسية</a>
+                    <a href="index.html#about" data-i18n="about">عن الشركة</a>
+                    <a href="index.html#properties" data-i18n="properties">العقارات</a>
+                </div>
+                <div>
+                    <h4 data-i18n="footerSupport">الدعم</h4>
+                    <a href="index.html#contact">اتصل بنا</a>
+                    <a href="#">الأسئلة الشائعة</a>
+                </div>
+                <div>
+                    <h4 data-i18n="footerContact">اتصل بنا</h4>
+                    <a href="#">+20 100 000 0000</a>
+                    <a href="#">info@ora.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom" data-i18n="copyright">© 2026 أورا العقارية - جميع الحقوق محفوظة</div>
+        </div>
+    </footer>
+
+    <!-- CONTROL PANEL -->
+    <button class="control-toggle" id="controlToggle"><i class="fa-solid fa-sliders"></i></button>
+    <div class="control-panel" id="controlPanel">
+        <h4><i class="fa-regular fa-pen-to-square"></i> تخصيص المظهر</h4>
+        <div class="control-group">
+            <label>اللون الأساسي <span id="primaryVal">#1a1a2e</span></label>
+            <input type="color" id="primaryColor" value="#1a1a2e" />
+        </div>
+        <div class="control-group">
+            <label>اللون الذهبي <span id="secondaryVal">#c9a87c</span></label>
+            <input type="color" id="secondaryColor" value="#c9a87c" />
+        </div>
+        <div class="control-group">
+            <label>الخلفية <span id="bgVal">#f5f2ed</span></label>
+            <input type="color" id="bgColor" value="#f5f2ed" />
+        </div>
+        <div class="panel-btns">
+            <button class="reset-btn" id="resetColors">إعادة ضبط</button>
+            <button class="close-btn" id="closePanel">إغلاق</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+
+    <!-- الترجمة الإضافية لصفحة الأخبار -->
+    <script>
+        const extraTranslations = {
+            ar: {
+                newsDesc: "تابع أحدث أخبار السوق العقاري ونصائح الخبراء.",
+                backHome: "العودة للرئيسية"
+            },
+            en: {
+                newsDesc: "Follow the latest real estate market news and expert tips.",
+                backHome: "Back to Home"
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof translations !== 'undefined') {
+                for (let lang in extraTranslations) {
+                    if (translations[lang]) {
+                        Object.assign(translations[lang], extraTranslations[lang]);
+                    }
+                }
+            }
+            const currentLang = localStorage.getItem('ora-lang') || 'ar';
+            if (typeof applyLanguage === 'function') {
+                applyLanguage(currentLang);
+            }
+        });
+    </script>
+
+</body>
+</html>
