@@ -712,3 +712,4 @@ footer {
 .control-panel::-webkit-scrollbar { width: 4px; }
 .control-panel::-webkit-scrollbar-track { background: transparent; }
 .control-panel::-webkit-scrollbar-thumb { background: var(--secondary); border-radius: 4px; }
+
