@@ -94,7 +94,7 @@ const translations = {
         namePlaceholder: "Full Name",
         emailPlaceholder: "Email Address",
         messagePlaceholder: "Your Message",
-        sendBtn: 'Send Consultation Request <i class="fa-solid fa-paper-plane</i>',
+        sendBtn: 'Send Consultation Request <i class="fa-solid fa-paper-plane"></i>',
         ctaTag: "DISCOVER MORE",
         ctaTitle: "Looking for more options?",
         ctaDesc: "Browse the complete list of all available properties with full details and prices.",
