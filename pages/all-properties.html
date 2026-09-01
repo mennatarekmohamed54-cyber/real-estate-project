@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>جميع العقارات | أورا العقارية</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+</head>
+<body>
+
+    <div class="loader" id="loader">
+        <div>
+            <div class="loader-logo">ORA<span>.</span></div>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="../index.html" class="logo">ORA<span>.</span></a>
+            <nav class="nav-links" id="navLinks">
+                <a href="../index.html" data-i18n="home">الرئيسية</a>
+                <a href="../index.html#about" data-i18n="about">عن الشركة</a>
+                <a href="../index.html#properties" data-i18n="properties">العقارات</a>
+                <a href="../news.html" data-i18n="news">الأخبار</a>
+                <a href="../index.html#gallery" data-i18n="gallery">المعرض</a>
+                <a href="../index.html#contact" data-i18n="contact">اتصال</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="lang-btn" id="langBtn">EN</button>
+                <button class="theme-btn" id="themeBtn"><i class="fa-regular fa-moon"></i></button>
+                <button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <section style="padding: 120px 0 70px;">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-tag">قائمة شاملة</span>
+                <h2 class="section-title">جميع <span>العقارات</span></h2>
+                <p style="color:var(--text-muted); max-width:600px; margin:10px auto 0;">استعرض كل الوحدات المتاحة للبيع والإيجار مع كامل المواصفات.</p>
+            </div>
+
+            <div class="all-props-grid">
+                <div class="property-card">
+                    <div class="img-wrap">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=90" alt="Villa" />
+                        <span class="badge-status gold">للبيع</span>
+                    </div>
+                    <div class="body">
+                        <h3>فيلا جاردن فيو</h3>
+                        <div class="location"><i class="fa-solid fa-location-dot"></i> مدينة نصر</div>
+                        <div class="meta">
+                            <span><i class="fa-solid fa-bed"></i> 6</span>
+                            <span><i class="fa-solid fa-bath"></i> 5</span>
+                            <span><i class="fa-solid fa-vector-square"></i> 550 م²</span>
+                        </div>
+                        <div class="price">$650,000</div>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="img-wrap">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=90" alt="Apartment" />
+                        <span class="badge-status">للإيجار</span>
+                    </div>
+                    <div class="body">
+                        <h3>شقة ويست تاور</h3>
+                        <div class="location"><i class="fa-solid fa-location-dot"></i> الشيخ زايد</div>
+                        <div class="meta">
+                            <span><i class="fa-solid fa-bed"></i> 2</span>
+                            <span><i class="fa-solid fa-bath"></i> 2</span>
+                            <span><i class="fa-solid fa-vector-square"></i> 160 م²</span>
+                        </div>
+                        <div class="price">$800 <small style="font-size:0.8rem;">/شهر</small></div>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="img-wrap">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=90" alt="Commercial" />
+                        <span class="badge-status gold">استثماري</span>
+                    </div>
+                    <div class="body">
+                        <h3>مبنى تجاري</h3>
+                        <div class="location"><i class="fa-solid fa-location-dot"></i> وسط البلد</div>
+                        <div class="meta">
+                            <span><i class="fa-solid fa-building"></i> 8 طوابق</span>
+                            <span><i class="fa-solid fa-vector-square"></i> 3000 م²</span>
+                        </div>
+                        <div class="price">$4,500,000</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align:center; margin-top:40px;">
+                <a href="../index.html#properties" style="display:inline-block; padding:14px 40px; background:var(--primary); color:#fff; font-weight:700; transition:var(--transition); text-decoration:none;">← العودة للعقارات</a>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background:#0d0d0d; color:rgba(255,255,255,0.4); padding:24px 0; text-align:center;">
+        <div class="container"><p data-i18n="copyright">© 2026 أورا العقارية - جميع الحقوق محفوظة</p></div>
+    </footer>
+
+    <button class="control-toggle" id="controlToggle"><i class="fa-solid fa-sliders"></i></button>
+    <div class="control-panel" id="controlPanel">
+        <h4><i class="fa-regular fa-pen-to-square"></i> تخصيص المظهر</h4>
+        <div class="control-group">
+            <label>اللون الأساسي <span id="primaryVal">#1a1a2e</span></label>
+            <input type="color" id="primaryColor" value="#1a1a2e" />
+        </div>
+        <div class="control-group">
+            <label>اللون الذهبي <span id="secondaryVal">#c9a87c</span></label>
+            <input type="color" id="secondaryColor" value="#c9a87c" />
+        </div>
+        <div class="control-group">
+            <label>الخلفية <span id="bgVal">#f5f2ed</span></label>
+            <input type="color" id="bgColor" value="#f5f2ed" />
+        </div>
+        <div class="panel-btns">
+            <button class="reset-btn" id="resetColors">إعادة ضبط</button>
+            <button class="close-btn" id="closePanel">إغلاق</button>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+
+</body>
+</html>
