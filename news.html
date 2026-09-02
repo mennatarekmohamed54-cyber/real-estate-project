@@ -5,15 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>جميع الأخبار | أورا العقارية</title>
 
-    <!-- ===== المكتبات المحلية ===== -->
-    <link rel="stylesheet" href="libs/bootstrap.min.css" />
-    <link rel="stylesheet" href="libs/font-awesome/all.min.css" />
-    <link rel="stylesheet" href="libs/swiper-bundle/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="libs/aos/aos.css" />
-    
-    <!-- ===== Google Fonts ===== -->
+    <!-- ===== المكتبات ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet" />
-    
+
     <!-- ===== ملفات المشروع ===== -->
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -104,8 +102,8 @@
     <div class="control-panel" id="controlPanel">
         <h4><i class="fa-regular fa-pen-to-square"></i> تخصيص المظهر</h4>
         <div class="control-group">
-            <label>اللون الأساسي <span id="primaryVal">#1a1a2e</span></label>
-            <input type="color" id="primaryColor" value="#1a1a2e" />
+            <label>اللون الأساسي <span id="primaryVal">#0f1a2e</span></label>
+            <input type="color" id="primaryColor" value="#0f1a2e" />
         </div>
         <div class="control-group">
             <label>اللون الذهبي <span id="secondaryVal">#c9a87c</span></label>
@@ -121,22 +119,42 @@
         </div>
     </div>
 
-    <a href="https://wa.me/201000000000?text=مرحباً%20أريد%20استشارة%20عقارية" 
-       target="_blank" 
-       class="whatsapp-btn" 
-       id="whatsappBtn">
+    <a href="https://wa.me/201000000000?text=مرحباً%20أريد%20استشارة%20عقارية" target="_blank" class="whatsapp-btn" id="whatsappBtn">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- ===== السكريبتات المحلية ===== -->
-    <script src="libs/bootstrap.bundle.min.js"></script>
-    <script src="libs/aos/aos.js"></script>
-    <script src="libs/swiper-bundle/swiper-bundle.min.js"></script>
-    <script src="libs/font-awesome/all.min.js"></script>
-    
-    <!-- ===== ملفات المشروع ===== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        const extraTranslations = {
+            ar: {
+                newsDesc: "تابع أحدث أخبار السوق العقاري ونصائح الخبراء.",
+                backHome: "العودة للرئيسية"
+            },
+            en: {
+                newsDesc: "Follow the latest real estate market news and expert tips.",
+                backHome: "Back to Home"
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof translations !== 'undefined') {
+                for (let lang in extraTranslations) {
+                    if (translations[lang]) {
+                        Object.assign(translations[lang], extraTranslations[lang]);
+                    }
+                }
+            }
+            const currentLang = localStorage.getItem('ora-lang') || 'ar';
+            if (typeof applyLanguage === 'function') {
+                applyLanguage(currentLang);
+            }
+        });
+    </script>
 
 </body>
 </html>
