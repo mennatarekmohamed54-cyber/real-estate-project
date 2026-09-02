@@ -5,12 +5,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>دوبلكس النيل | أورا العقارية</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/variables.css" />
     <link rel="stylesheet" href="../css/style.css" />
 
+    <style>
+        .property-detail {
+            padding: 120px 0 70px;
+        }
+        .property-detail .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+        .property-detail .grid .main-image {
+            width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .property-detail .grid .main-image:hover {
+            box-shadow: var(--shadow-hover);
+            transform: scale(1.01);
+        }
+        .property-detail .grid .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+        }
+        .property-detail .grid .price {
+            font-size: 2rem;
+            color: var(--secondary);
+            font-weight: 700;
+            margin: 12px 0;
+        }
+        .property-detail .grid .meta {
+            display: flex;
+            gap: 24px;
+            color: var(--text-muted);
+            margin: 16px 0;
+            flex-wrap: wrap;
+        }
+        .property-detail .grid .meta i {
+            color: var(--secondary);
+            margin-left: 5px;
+        }
+        .property-detail .grid .description {
+            color: var(--text-muted);
+            line-height: 2;
+            margin: 16px 0;
+            font-size: 1.05rem;
+        }
+        .property-detail .grid .specs {
+            color: var(--text-muted);
+            line-height: 2;
+            margin: 16px 0;
+            font-size: 1.05rem;
+        }
+        .property-detail .grid .specs strong {
+            color: var(--text);
+        }
+        .property-detail .grid .buttons {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .property-detail .grid .buttons .btn-contact {
+            display: inline-block;
+            background: var(--secondary);
+            color: #fff;
+            padding: 12px 36px;
+            font-weight: 700;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        .property-detail .grid .buttons .btn-contact:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        .property-detail .grid .buttons .btn-back {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 36px;
+            font-weight: 700;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        .property-detail .grid .buttons .btn-back:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 992px) {
+            .property-detail .grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .property-detail .grid .title {
+                font-size: 2.2rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .property-detail {
+                padding: 100px 0 50px;
+            }
+            .property-detail .grid .title {
+                font-size: 1.8rem;
+            }
+            .property-detail .grid .price {
+                font-size: 1.6rem;
+            }
+            .property-detail .grid .meta {
+                gap: 14px;
+                font-size: 0.9rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .property-detail .grid .title {
+                font-size: 1.5rem;
+            }
+            .property-detail .grid .price {
+                font-size: 1.3rem;
+            }
+            .property-detail .grid .buttons {
+                flex-direction: column;
+            }
+            .property-detail .grid .buttons a {
+                text-align: center;
+                width: 100%;
+            }
+            .property-detail .grid .meta {
+                gap: 10px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -40,38 +176,37 @@
         </div>
     </header>
 
-    <section style="padding: 120px 0 70px;">
+    <section class="property-detail">
         <div class="container">
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:start;">
+            <div class="grid">
                 <div>
                     <a href="gallery-2.html" style="display:block;">
-                        <img style="width:100%; border-radius:var(--radius); box-shadow:var(--shadow);" 
-                             src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=90" alt="Duplex" />
+                        <img class="main-image" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=90" alt="Duplex" />
                     </a>
                 </div>
                 <div>
-                    <h1 style="font-family:'Playfair Display',serif; font-size:2.8rem;">دوبلكس النيل الفاخر</h1>
-                    <div style="font-size:2rem; color:var(--secondary); font-weight:700; margin:12px 0;">$1,500 <small style="font-size:1rem;">/شهر</small></div>
-                    <div style="display:flex; gap:24px; color:var(--text-muted); margin:16px 0; flex-wrap:wrap;">
-                        <span><i class="fa-solid fa-bed"></i> 3 غرف</span>
-                        <span><i class="fa-solid fa-bath"></i> 2 حمامات</span>
+                    <h1 class="title" data-i18n="prop2_title">دوبلكس النيل الفاخر</h1>
+                    <div class="price">$1,500 <small style="font-size:1rem;">/شهر</small></div>
+                    <div class="meta">
+                        <span><i class="fa-solid fa-bed"></i> <span data-i18n="bedrooms2">3 غرف</span></span>
+                        <span><i class="fa-solid fa-bath"></i> <span data-i18n="bathrooms2">2 حمامات</span></span>
                         <span><i class="fa-solid fa-vector-square"></i> 250 م²</span>
                     </div>
-                    <div style="display:flex; gap:24px; color:var(--text-muted); margin:16px 0; flex-wrap:wrap;">
-                        <span><i class="fa-solid fa-location-dot"></i> الزمالك، القاهرة</span>
-                        <span><i class="fa-solid fa-tag"></i> للإيجار</span>
+                    <div class="meta">
+                        <span><i class="fa-solid fa-location-dot"></i> <span data-i18n="location2">الزمالك، القاهرة</span></span>
+                        <span><i class="fa-solid fa-tag"></i> <span data-i18n="rent">للإيجار</span></span>
                     </div>
-                    <p style="color:var(--text-muted); line-height:2; margin:16px 0; font-size:1.05rem;">دوبلكس فاخر بإطلالة مباشرة على النيل، تشطيب سوبر لوكس، يقع في قلب الزمالك الراقي. يتميز بمساحات واسعة ونوافذ بانورامية تطل على النيل.</p>
-                    <p style="color:var(--text-muted); line-height:2; margin:16px 0; font-size:1.05rem;">
-                        <strong>المواصفات:</strong><br />
-                        • مساحة الأرض: 300 م²<br />
-                        • دورين + سطح خاص<br />
-                        • تشطيب سوبر لوكس<br />
-                        • إطلالة بانورامية على النيل
-                    </p>
-                    <div style="margin-top:30px;">
-                        <a href="../index.html#contact" style="display:inline-block; background:var(--secondary); color:#fff; padding:12px 36px; font-weight:700; transition:var(--transition); text-decoration:none; margin-left:10px;">تواصل مع المستشار</a>
-                        <a href="../index.html#properties" style="display:inline-block; background:var(--primary); color:#fff; padding:12px 36px; font-weight:700; transition:var(--transition); text-decoration:none;">← العودة للقائمة</a>
+                    <p class="description" data-i18n="prop2_desc">دوبلكس فاخر بإطلالة مباشرة على النيل، تشطيب سوبر لوكس، يقع في قلب الزمالك الراقي. يتميز بمساحات واسعة ونوافذ بانورامية تطل على النيل.</p>
+                    <div class="specs">
+                        <strong data-i18n="specs2">المواصفات:</strong><br />
+                        <span data-i18n="specs2_1">• مساحة الأرض: 300 م²</span><br />
+                        <span data-i18n="specs2_2">• دورين + سطح خاص</span><br />
+                        <span data-i18n="specs2_3">• تشطيب سوبر لوكس</span><br />
+                        <span data-i18n="specs2_4">• إطلالة بانورامية على النيل</span>
+                    </div>
+                    <div class="buttons">
+                        <a href="../index.html#contact" class="btn-contact" data-i18n="contact_advisor">تواصل مع المستشار</a>
+                        <a href="../index.html#properties" class="btn-back">← <span data-i18n="back_list">العودة للقائمة</span></a>
                     </div>
                 </div>
             </div>
@@ -86,8 +221,8 @@
     <div class="control-panel" id="controlPanel">
         <h4><i class="fa-regular fa-pen-to-square"></i> تخصيص المظهر</h4>
         <div class="control-group">
-            <label>اللون الأساسي <span id="primaryVal">#1a1a2e</span></label>
-            <input type="color" id="primaryColor" value="#1a1a2e" />
+            <label>اللون الأساسي <span id="primaryVal">#0f1a2e</span></label>
+            <input type="color" id="primaryColor" value="#0f1a2e" />
         </div>
         <div class="control-group">
             <label>اللون الذهبي <span id="secondaryVal">#c9a87c</span></label>
@@ -103,7 +238,66 @@
         </div>
     </div>
 
+    <a href="https://wa.me/201000000000?text=مرحباً%20أريد%20استشارة%20عقارية" target="_blank" class="whatsapp-btn" id="whatsappBtn">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/translations.js"></script>
     <script src="../js/main.js"></script>
+
+    <script>
+        const extraTranslations = {
+            ar: {
+                prop2_title: "دوبلكس النيل الفاخر",
+                bedrooms2: "3 غرف",
+                bathrooms2: "2 حمامات",
+                location2: "الزمالك، القاهرة",
+                rent: "للإيجار",
+                prop2_desc: "دوبلكس فاخر بإطلالة مباشرة على النيل، تشطيب سوبر لوكس، يقع في قلب الزمالك الراقي. يتميز بمساحات واسعة ونوافذ بانورامية تطل على النيل.",
+                specs2: "المواصفات:",
+                specs2_1: "• مساحة الأرض: 300 م²",
+                specs2_2: "• دورين + سطح خاص",
+                specs2_3: "• تشطيب سوبر لوكس",
+                specs2_4: "• إطلالة بانورامية على النيل",
+                contact_advisor: "تواصل مع المستشار",
+                back_list: "العودة للقائمة",
+                copyright: "© 2026 أورا العقارية - جميع الحقوق محفوظة"
+            },
+            en: {
+                prop2_title: "Nile Luxury Duplex",
+                bedrooms2: "3 Bedrooms",
+                bathrooms2: "2 Bathrooms",
+                location2: "Zamalek, Cairo",
+                rent: "For Rent",
+                prop2_desc: "A luxurious duplex with a direct view of the Nile, super luxury finishing, located in the heart of upscale Zamalek. It features spacious areas and panoramic windows overlooking the Nile.",
+                specs2: "Specifications:",
+                specs2_1: "• Land area: 300 m²",
+                specs2_2: "• Two floors + private roof",
+                specs2_3: "• Super luxury finishing",
+                specs2_4: "• Panoramic Nile view",
+                contact_advisor: "Contact Advisor",
+                back_list: "Back to List",
+                copyright: "© 2026 Ora Real Estate - All Rights Reserved"
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof translations !== 'undefined') {
+                for (let lang in extraTranslations) {
+                    if (translations[lang]) {
+                        Object.assign(translations[lang], extraTranslations[lang]);
+                    }
+                }
+            }
+            const currentLang = localStorage.getItem('ora-lang') || 'ar';
+            if (typeof applyLanguage === 'function') {
+                applyLanguage(currentLang);
+            }
+        });
+    </script>
 
 </body>
 </html>
