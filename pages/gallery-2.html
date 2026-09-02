@@ -5,12 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modern Villa | أورا العقارية</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/variables.css" />
     <link rel="stylesheet" href="../css/style.css" />
 
+    <style>
+        .gallery-detail {
+            padding: 120px 0 70px;
+        }
+        .gallery-detail .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+        .gallery-detail .grid .main-image {
+            width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .gallery-detail .grid .main-image:hover {
+            box-shadow: var(--shadow-hover);
+            transform: scale(1.01);
+        }
+        .gallery-detail .grid .sub {
+            color: var(--secondary);
+            font-weight: 600;
+            letter-spacing: 2px;
+            font-size: 13px;
+        }
+        .gallery-detail .grid .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin: 12px 0 16px;
+        }
+        .gallery-detail .grid .description {
+            color: var(--text-muted);
+            line-height: 2;
+            font-size: 1.05rem;
+        }
+        .gallery-detail .grid .specs {
+            color: var(--text-muted);
+            line-height: 2;
+            font-size: 1.05rem;
+        }
+        .gallery-detail .grid .specs strong {
+            color: var(--text);
+        }
+        .btn-back {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 36px;
+            border: none;
+            font-weight: 700;
+            transition: var(--transition);
+            text-decoration: none;
+            margin-top: 30px;
+        }
+        .btn-back:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 992px) {
+            .gallery-detail .grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .gallery-detail .grid .title {
+                font-size: 2.2rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .gallery-detail {
+                padding: 100px 0 50px;
+            }
+            .gallery-detail .grid .title {
+                font-size: 1.8rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery-detail .grid .title {
+                font-size: 1.5rem;
+            }
+            .gallery-detail .grid .description,
+            .gallery-detail .grid .specs {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -40,27 +130,24 @@
         </div>
     </header>
 
-    <section style="padding: 120px 0 70px;">
+    <section class="gallery-detail">
         <div class="container">
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:start;">
+            <div class="grid">
                 <div>
-                    <img style="width:100%; border-radius:var(--radius); box-shadow:var(--shadow);" 
-                         src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=90" alt="Modern Villa" />
+                    <img class="main-image" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=90" alt="Modern Villa" />
                 </div>
                 <div>
-                    <span style="color:var(--secondary); font-weight:600; letter-spacing:2px; font-size:13px;">02 / RESIDENCE</span>
-                    <h1 style="font-family:'Playfair Display',serif; font-size:2.8rem; margin:12px 0 16px;">Modern Villa</h1>
-                    <p style="color:var(--text-muted); line-height:2; font-size:1.05rem;">فيلا عصرية بتصميم معاصر يجمع بين الفخامة والوظيفية. تتميز بواجهة زجاجية عصرية، حديقة خلفية، ومسبح لا نهائي.</p>
-                    <p style="color:var(--text-muted); line-height:2; font-size:1.05rem;">
-                        <strong>التفاصيل:</strong><br />
-                        • مساحة البناء: 550 م²<br />
-                        • حديقة خاصة 300 م²<br />
-                        • مسبح لا نهائي<br />
-                        • واجهة زجاجية
-                    </p>
-                    <div style="margin-top:30px;">
-                        <a href="../index.html#gallery" style="display:inline-block; padding:12px 36px; background:var(--primary); color:#fff; font-weight:700; transition:var(--transition); text-decoration:none;">← العودة للمعرض</a>
+                    <span class="sub" data-i18n="g2_sub">02 / RESIDENCE</span>
+                    <h1 class="title" data-i18n="g2_title">Modern Villa</h1>
+                    <p class="description" data-i18n="g2_desc">فيلا عصرية بتصميم معاصر يجمع بين الفخامة والوظيفية. تتميز بواجهة زجاجية عصرية، حديقة خلفية، ومسبح لا نهائي.</p>
+                    <div class="specs">
+                        <strong data-i18n="g2_specs">التفاصيل:</strong><br />
+                        <span data-i18n="g2_s1">• مساحة البناء: 550 م²</span><br />
+                        <span data-i18n="g2_s2">• حديقة خاصة 300 م²</span><br />
+                        <span data-i18n="g2_s3">• مسبح لا نهائي</span><br />
+                        <span data-i18n="g2_s4">• واجهة زجاجية</span>
                     </div>
+                    <a href="../index.html#gallery" class="btn-back" data-i18n="backGallery">← العودة للمعرض</a>
                 </div>
             </div>
         </div>
@@ -74,8 +161,8 @@
     <div class="control-panel" id="controlPanel">
         <h4><i class="fa-regular fa-pen-to-square"></i> تخصيص المظهر</h4>
         <div class="control-group">
-            <label>اللون الأساسي <span id="primaryVal">#1a1a2e</span></label>
-            <input type="color" id="primaryColor" value="#1a1a2e" />
+            <label>اللون الأساسي <span id="primaryVal">#0f1a2e</span></label>
+            <input type="color" id="primaryColor" value="#0f1a2e" />
         </div>
         <div class="control-group">
             <label>اللون الذهبي <span id="secondaryVal">#c9a87c</span></label>
@@ -91,7 +178,58 @@
         </div>
     </div>
 
+    <a href="https://wa.me/201000000000?text=مرحباً%20أريد%20استشارة%20عقارية" target="_blank" class="whatsapp-btn" id="whatsappBtn">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/translations.js"></script>
     <script src="../js/main.js"></script>
+
+    <script>
+        const extraTranslations = {
+            ar: {
+                g2_sub: "02 / RESIDENCE",
+                g2_title: "Modern Villa",
+                g2_desc: "فيلا عصرية بتصميم معاصر يجمع بين الفخامة والوظيفية. تتميز بواجهة زجاجية عصرية، حديقة خلفية، ومسبح لا نهائي.",
+                g2_specs: "التفاصيل:",
+                g2_s1: "• مساحة البناء: 550 م²",
+                g2_s2: "• حديقة خاصة 300 م²",
+                g2_s3: "• مسبح لا نهائي",
+                g2_s4: "• واجهة زجاجية",
+                backGallery: "العودة للمعرض",
+                copyright: "© 2026 أورا العقارية - جميع الحقوق محفوظة"
+            },
+            en: {
+                g2_sub: "02 / RESIDENCE",
+                g2_title: "Modern Villa",
+                g2_desc: "A contemporary villa combining luxury and functionality. Features a modern glass facade, backyard garden, and an infinity pool.",
+                g2_specs: "Details:",
+                g2_s1: "• Building area: 550 m²",
+                g2_s2: "• Private garden 300 m²",
+                g2_s3: "• Infinity pool",
+                g2_s4: "• Glass facade",
+                backGallery: "Back to Gallery",
+                copyright: "© 2026 Ora Real Estate - All Rights Reserved"
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof translations !== 'undefined') {
+                for (let lang in extraTranslations) {
+                    if (translations[lang]) {
+                        Object.assign(translations[lang], extraTranslations[lang]);
+                    }
+                }
+            }
+            const currentLang = localStorage.getItem('ora-lang') || 'ar';
+            if (typeof applyLanguage === 'function') {
+                applyLanguage(currentLang);
+            }
+        });
+    </script>
 
 </body>
 </html>
