@@ -5,12 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Future Residence | أورا العقارية</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/variables.css" />
     <link rel="stylesheet" href="../css/style.css" />
 
+    <style>
+        .gallery-detail {
+            padding: 120px 0 70px;
+        }
+        .gallery-detail .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+        .gallery-detail .grid .main-image {
+            width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .gallery-detail .grid .main-image:hover {
+            box-shadow: var(--shadow-hover);
+            transform: scale(1.01);
+        }
+        .gallery-detail .grid .sub {
+            color: var(--secondary);
+            font-weight: 600;
+            letter-spacing: 2px;
+            font-size: 13px;
+        }
+        .gallery-detail .grid .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin: 12px 0 16px;
+        }
+        .gallery-detail .grid .description {
+            color: var(--text-muted);
+            line-height: 2;
+            font-size: 1.05rem;
+        }
+        .gallery-detail .grid .specs {
+            color: var(--text-muted);
+            line-height: 2;
+            font-size: 1.05rem;
+        }
+        .gallery-detail .grid .specs strong {
+            color: var(--text);
+        }
+        .btn-back {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 36px;
+            border: none;
+            font-weight: 700;
+            transition: var(--transition);
+            text-decoration: none;
+            margin-top: 30px;
+        }
+        .btn-back:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 992px) {
+            .gallery-detail .grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .gallery-detail .grid .title {
+                font-size: 2.2rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .gallery-detail {
+                padding: 100px 0 50px;
+            }
+            .gallery-detail .grid .title {
+                font-size: 1.8rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery-detail .grid .title {
+                font-size: 1.5rem;
+            }
+            .gallery-detail .grid .description,
+            .gallery-detail .grid .specs {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -40,27 +130,24 @@
         </div>
     </header>
 
-    <section style="padding: 120px 0 70px;">
+    <section class="gallery-detail">
         <div class="container">
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:start;">
+            <div class="grid">
                 <div>
-                    <img style="width:100%; border-radius:var(--radius); box-shadow:var(--shadow);" 
-                         src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=90" alt="Future Residence" />
+                    <img class="main-image" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=90" alt="Future Residence" />
                 </div>
                 <div>
-                    <span style="color:var(--secondary); font-weight:600; letter-spacing:2px; font-size:13px;">04 / ARCHITECTURE</span>
-                    <h1 style="font-family:'Playfair Display',serif; font-size:2.8rem; margin:12px 0 16px;">Future Residence</h1>
-                    <p style="color:var(--text-muted); line-height:2; font-size:1.05rem;">تصميم معماري مستقبلي يدمج بين الابتكار والاستدامة. يتميز بخطوط عصرية وواجهات زجاجية تعكس التطور الحضاري للمدينة.</p>
-                    <p style="color:var(--text-muted); line-height:2; font-size:1.05rem;">
-                        <strong>التفاصيل:</strong><br />
-                        • مساحة المشروع: 5000 م²<br />
-                        • تصميم مستدام<br />
-                        • واجهات زجاجية عصرية<br />
-                        • أنظمة ذكية متطورة
-                    </p>
-                    <div style="margin-top:30px;">
-                        <a href="../index.html#gallery" style="display:inline-block; padding:12px 36px; background:var(--primary); color:#fff; font-weight:700; transition:var(--transition); text-decoration:none;">← العودة للمعرض</a>
+                    <span class="sub" data-i18n="g4_sub">04 / ARCHITECTURE</span>
+                    <h1 class="title" data-i18n="g4_title">Future Residence</h1>
+                    <p class="description" data-i18n="g4_desc">تصميم معماري مستقبلي يدمج بين الابتكار والاستدامة. يتميز بخطوط عصرية وواجهات زجاجية تعكس التطور الحضاري للمدينة.</p>
+                    <div class="specs">
+                        <strong data-i18n="g4_specs">التفاصيل:</strong><br />
+                        <span data-i18n="g4_s1">• مساحة المشروع: 5000 م²</span><br />
+                        <span data-i18n="g4_s2">• تصميم مستدام</span><br />
+                        <span data-i18n="g4_s3">• واجهات زجاجية عصرية</span><br />
+                        <span data-i18n="g4_s4">• أنظمة ذكية متطورة</span>
                     </div>
+                    <a href="../index.html#gallery" class="btn-back" data-i18n="backGallery">← العودة للمعرض</a>
                 </div>
             </div>
         </div>
@@ -74,8 +161,8 @@
     <div class="control-panel" id="controlPanel">
         <h4><i class="fa-regular fa-pen-to-square"></i> تخصيص المظهر</h4>
         <div class="control-group">
-            <label>اللون الأساسي <span id="primaryVal">#1a1a2e</span></label>
-            <input type="color" id="primaryColor" value="#1a1a2e" />
+            <label>اللون الأساسي <span id="primaryVal">#0f1a2e</span></label>
+            <input type="color" id="primaryColor" value="#0f1a2e" />
         </div>
         <div class="control-group">
             <label>اللون الذهبي <span id="secondaryVal">#c9a87c</span></label>
@@ -91,7 +178,60 @@
         </div>
     </div>
 
+    <a href="https://wa.me/201000000000?text=مرحباً%20أريد%20استشارة%20عقارية" target="_blank" class="whatsapp-btn" id="whatsappBtn">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/translations.js"></script>
     <script src="../js/main.js"></script>
+
+    <script>
+        const extraTranslations = {
+            ar: {
+                g4_sub: "04 / ARCHITECTURE",
+                g4_title: "Future Residence",
+                g4_desc: "تصميم معماري مستقبلي يدمج بين الابتكار والاستدامة. يتميز بخطوط عصرية وواجهات زجاجية تعكس التطور الحضاري للمدينة.",
+                g4_specs: "التفاصيل:",
+                g4_s1: "• مساحة المشروع: 5000 م²",
+                g4_s2: "• تصميم مستدام",
+                g4_s3: "• واجهات زجاجية عصرية",
+                g4_s4: "• أنظمة ذكية متطورة",
+                backGallery: "العودة للمعرض",
+                copyright: "© 2026 أورا العقارية - جميع الحقوق محفوظة"
+            },
+            en: {
+                g4_sub: "04 / ARCHITECTURE",
+                g4_title: "Future Residence",
+                g4_desc: "A futuristic architectural design blending innovation and sustainability. Features modern lines and glass facades reflecting the city's urban development.",
+                g4_specs: "Details:",
+                g4_s1: "• Project area: 5000 m²",
+                g4_s2: "• Sustainable design",
+                g4_s3: "• Modern glass facades",
+                g4_s4: "• Advanced smart systems",
+                backGallery: "Back to Gallery",
+                copyright: "© 2026 Ora Real Estate - All Rights Reserved"
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof translations !== 'undefined') {
+                for (let lang in extraTranslations) {
+                    if (translations[lang]) {
+                        Object.assign(translations[lang], extraTranslations[lang]);
+                    }
+                }
+            }
+            const currentLang = localStorage.getItem('ora-lang') || 'ar';
+            if (typeof applyLanguage === 'function') {
+                applyLanguage(currentLang);
+            }
+        });
+    </script>
 
 </body>
 </html>
+
+   
