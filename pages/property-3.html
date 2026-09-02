@@ -1,16 +1,153 @@
-<!DOCTYPE html>
+
+  <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>أرض العاصمة | أورا العقارية</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/variables.css" />
     <link rel="stylesheet" href="../css/style.css" />
 
+    <style>
+        .property-detail {
+            padding: 120px 0 70px;
+        }
+        .property-detail .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+        .property-detail .grid .main-image {
+            width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .property-detail .grid .main-image:hover {
+            box-shadow: var(--shadow-hover);
+            transform: scale(1.01);
+        }
+        .property-detail .grid .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+        }
+        .property-detail .grid .price {
+            font-size: 2rem;
+            color: var(--secondary);
+            font-weight: 700;
+            margin: 12px 0;
+        }
+        .property-detail .grid .meta {
+            display: flex;
+            gap: 24px;
+            color: var(--text-muted);
+            margin: 16px 0;
+            flex-wrap: wrap;
+        }
+        .property-detail .grid .meta i {
+            color: var(--secondary);
+            margin-left: 5px;
+        }
+        .property-detail .grid .description {
+            color: var(--text-muted);
+            line-height: 2;
+            margin: 16px 0;
+            font-size: 1.05rem;
+        }
+        .property-detail .grid .specs {
+            color: var(--text-muted);
+            line-height: 2;
+            margin: 16px 0;
+            font-size: 1.05rem;
+        }
+        .property-detail .grid .specs strong {
+            color: var(--text);
+        }
+        .property-detail .grid .buttons {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .property-detail .grid .buttons .btn-contact {
+            display: inline-block;
+            background: var(--secondary);
+            color: #fff;
+            padding: 12px 36px;
+            font-weight: 700;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        .property-detail .grid .buttons .btn-contact:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        .property-detail .grid .buttons .btn-back {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 36px;
+            font-weight: 700;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        .property-detail .grid .buttons .btn-back:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 992px) {
+            .property-detail .grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .property-detail .grid .title {
+                font-size: 2.2rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .property-detail {
+                padding: 100px 0 50px;
+            }
+            .property-detail .grid .title {
+                font-size: 1.8rem;
+            }
+            .property-detail .grid .price {
+                font-size: 1.6rem;
+            }
+            .property-detail .grid .meta {
+                gap: 14px;
+                font-size: 0.9rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .property-detail .grid .title {
+                font-size: 1.5rem;
+            }
+            .property-detail .grid .price {
+                font-size: 1.3rem;
+            }
+            .property-detail .grid .buttons {
+                flex-direction: column;
+            }
+            .property-detail .grid .buttons a {
+                text-align: center;
+                width: 100%;
+            }
+            .property-detail .grid .meta {
+                gap: 10px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -40,37 +177,36 @@
         </div>
     </header>
 
-    <section style="padding: 120px 0 70px;">
+    <section class="property-detail">
         <div class="container">
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:start;">
+            <div class="grid">
                 <div>
                     <a href="gallery-3.html" style="display:block;">
-                        <img style="width:100%; border-radius:var(--radius); box-shadow:var(--shadow);" 
-                             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=90" alt="Land" />
+                        <img class="main-image" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=90" alt="Land" />
                     </a>
                 </div>
                 <div>
-                    <h1 style="font-family:'Playfair Display',serif; font-size:2.8rem;">أرض العاصمة الإدارية</h1>
-                    <div style="font-size:2rem; color:var(--secondary); font-weight:700; margin:12px 0;">$2,200,000</div>
-                    <div style="display:flex; gap:24px; color:var(--text-muted); margin:16px 0; flex-wrap:wrap;">
+                    <h1 class="title" data-i18n="prop3_title">أرض العاصمة الإدارية</h1>
+                    <div class="price">$2,200,000</div>
+                    <div class="meta">
                         <span><i class="fa-solid fa-vector-square"></i> 1200 م²</span>
-                        <span><i class="fa-solid fa-building"></i> تجاري</span>
+                        <span><i class="fa-solid fa-building"></i> <span data-i18n="commercial">تجاري</span></span>
                     </div>
-                    <div style="display:flex; gap:24px; color:var(--text-muted); margin:16px 0; flex-wrap:wrap;">
-                        <span><i class="fa-solid fa-location-dot"></i> العاصمة الإدارية الجديدة</span>
-                        <span><i class="fa-solid fa-tag"></i> استثماري</span>
+                    <div class="meta">
+                        <span><i class="fa-solid fa-location-dot"></i> <span data-i18n="location3">العاصمة الإدارية الجديدة</span></span>
+                        <span><i class="fa-solid fa-tag"></i> <span data-i18n="investment">استثماري</span></span>
                     </div>
-                    <p style="color:var(--text-muted); line-height:2; margin:16px 0; font-size:1.05rem;">أرض متميزة في قلب العاصمة الإدارية الجديدة، بجوار البنك المركزي والمنطقة الحكومية. موقع استراتيجي مثالي للمشاريع التجارية والاستثمارية.</p>
-                    <p style="color:var(--text-muted); line-height:2; margin:16px 0; font-size:1.05rem;">
-                        <strong>المواصفات:</strong><br />
-                        • مساحة الأرض: 1200 م²<br />
-                        • استخدام تجاري / إداري<br />
-                        • واجهة رئيسية 40 متر<br />
-                        • قريبة من الخدمات الحكومية
-                    </p>
-                    <div style="margin-top:30px;">
-                        <a href="../index.html#contact" style="display:inline-block; background:var(--secondary); color:#fff; padding:12px 36px; font-weight:700; transition:var(--transition); text-decoration:none; margin-left:10px;">تواصل مع المستشار</a>
-                        <a href="../index.html#properties" style="display:inline-block; background:var(--primary); color:#fff; padding:12px 36px; font-weight:700; transition:var(--transition); text-decoration:none;">← العودة للقائمة</a>
+                    <p class="description" data-i18n="prop3_desc">أرض متميزة في قلب العاصمة الإدارية الجديدة، بجوار البنك المركزي والمنطقة الحكومية. موقع استراتيجي مثالي للمشاريع التجارية والاستثمارية.</p>
+                    <div class="specs">
+                        <strong data-i18n="specs3">المواصفات:</strong><br />
+                        <span data-i18n="specs3_1">• مساحة الأرض: 1200 م²</span><br />
+                        <span data-i18n="specs3_2">• استخدام تجاري / إداري</span><br />
+                        <span data-i18n="specs3_3">• واجهة رئيسية 40 متر</span><br />
+                        <span data-i18n="specs3_4">• قريبة من الخدمات الحكومية</span>
+                    </div>
+                    <div class="buttons">
+                        <a href="../index.html#contact" class="btn-contact" data-i18n="contact_advisor">تواصل مع المستشار</a>
+                        <a href="../index.html#properties" class="btn-back">← <span data-i18n="back_list">العودة للقائمة</span></a>
                     </div>
                 </div>
             </div>
@@ -85,8 +221,8 @@
     <div class="control-panel" id="controlPanel">
         <h4><i class="fa-regular fa-pen-to-square"></i> تخصيص المظهر</h4>
         <div class="control-group">
-            <label>اللون الأساسي <span id="primaryVal">#1a1a2e</span></label>
-            <input type="color" id="primaryColor" value="#1a1a2e" />
+            <label>اللون الأساسي <span id="primaryVal">#0f1a2e</span></label>
+            <input type="color" id="primaryColor" value="#0f1a2e" />
         </div>
         <div class="control-group">
             <label>اللون الذهبي <span id="secondaryVal">#c9a87c</span></label>
@@ -102,7 +238,64 @@
         </div>
     </div>
 
+    <a href="https://wa.me/201000000000?text=مرحباً%20أريد%20استشارة%20عقارية" target="_blank" class="whatsapp-btn" id="whatsappBtn">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/translations.js"></script>
     <script src="../js/main.js"></script>
+
+    <script>
+        const extraTranslations = {
+            ar: {
+                prop3_title: "أرض العاصمة الإدارية",
+                commercial: "تجاري",
+                location3: "العاصمة الإدارية الجديدة",
+                investment: "استثماري",
+                prop3_desc: "أرض متميزة في قلب العاصمة الإدارية الجديدة، بجوار البنك المركزي والمنطقة الحكومية. موقع استراتيجي مثالي للمشاريع التجارية والاستثمارية.",
+                specs3: "المواصفات:",
+                specs3_1: "• مساحة الأرض: 1200 م²",
+                specs3_2: "• استخدام تجاري / إداري",
+                specs3_3: "• واجهة رئيسية 40 متر",
+                specs3_4: "• قريبة من الخدمات الحكومية",
+                contact_advisor: "تواصل مع المستشار",
+                back_list: "العودة للقائمة",
+                copyright: "© 2026 أورا العقارية - جميع الحقوق محفوظة"
+            },
+            en: {
+                prop3_title: "New Capital Land",
+                commercial: "Commercial",
+                location3: "New Administrative Capital",
+                investment: "Investment",
+                prop3_desc: "A prime land plot in the heart of the New Administrative Capital, next to the Central Bank and the government district. An ideal strategic location for commercial and investment projects.",
+                specs3: "Specifications:",
+                specs3_1: "• Land area: 1200 m²",
+                specs3_2: "• Commercial / Administrative use",
+                specs3_3: "• 40-meter frontage",
+                specs3_4: "• Close to government services",
+                contact_advisor: "Contact Advisor",
+                back_list: "Back to List",
+                copyright: "© 2026 Ora Real Estate - All Rights Reserved"
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof translations !== 'undefined') {
+                for (let lang in extraTranslations) {
+                    if (translations[lang]) {
+                        Object.assign(translations[lang], extraTranslations[lang]);
+                    }
+                }
+            }
+            const currentLang = localStorage.getItem('ora-lang') || 'ar';
+            if (typeof applyLanguage === 'function') {
+                applyLanguage(currentLang);
+            }
+        });
+    </script>
 
 </body>
 </html>
