@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>جميع الأخبار | أورا العقارية</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ===== المكتبات المحلية ===== -->
+    <link rel="stylesheet" href="libs/bootstrap.min.css" />
+    <link rel="stylesheet" href="libs/font-awesome/all.min.css" />
+    <link rel="stylesheet" href="libs/swiper-bundle/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="libs/aos/aos.css" />
+    
+    <!-- ===== Google Fonts ===== -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    
+    <!-- ===== ملفات المشروع ===== -->
+    <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/style.css" />
 
 </head>
@@ -43,9 +50,9 @@
     <section style="padding: 120px 0 70px;">
         <div class="container">
             <div class="section-head">
-                <span class="section-tag">آخر المستجدات</span>
-                <h2 class="section-title">جميع <span>الأخبار</span></h2>
-                <p style="color:var(--text-muted); max-width:600px; margin:10px auto 0;">تابع أحدث أخبار السوق العقاري ونصائح الخبراء.</p>
+                <span class="section-tag" data-i18n="newsTag">آخر المستجدات</span>
+                <h2 class="section-title" data-i18n="newsTitle">جميع <span>الأخبار</span></h2>
+                <p style="color:var(--text-muted); max-width:600px; margin:10px auto 0;" data-i18n="newsDesc">تابع أحدث أخبار السوق العقاري ونصائح الخبراء.</p>
             </div>
 
             <div class="news-grid">
@@ -55,7 +62,7 @@
                     </div>
                     <div class="body">
                         <div class="date">25 أغسطس 2026</div>
-                        <h4>انخفاض الفائدة يزيد الطلب على الوحدات السكنية</h4>
+                        <h4 data-i18n="news1">انخفاض الفائدة يزيد الطلب على الوحدات السكنية</h4>
                         <a href="pages/news-1.html">اقرأ المزيد <i class="fa-solid fa-arrow-left"></i></a>
                     </div>
                 </div>
@@ -66,7 +73,7 @@
                     </div>
                     <div class="body">
                         <div class="date">24 أغسطس 2026</div>
-                        <h4>افتتاح مشروع سكني ضخم في العاصمة الإدارية</h4>
+                        <h4 data-i18n="news2">افتتاح مشروع سكني ضخم في العاصمة الإدارية</h4>
                         <a href="pages/news-2.html">اقرأ المزيد <i class="fa-solid fa-arrow-left"></i></a>
                     </div>
                 </div>
@@ -77,14 +84,14 @@
                     </div>
                     <div class="body">
                         <div class="date">23 أغسطس 2026</div>
-                        <h4>دليلك الشامل لتجنب أخطاء شراء أول عقار</h4>
+                        <h4 data-i18n="news3">دليلك الشامل لتجنب أخطاء شراء أول عقار</h4>
                         <a href="pages/news-3.html">اقرأ المزيد <i class="fa-solid fa-arrow-left"></i></a>
                     </div>
                 </div>
             </div>
 
             <div style="text-align:center; margin-top:40px;">
-                <a href="index.html" style="display:inline-block; padding:14px 40px; background:var(--primary); color:#fff; font-weight:700; transition:var(--transition); text-decoration:none;">← العودة للرئيسية</a>
+                <a href="index.html" style="display:inline-block; padding:14px 40px; background:var(--primary); color:#fff; font-weight:700; transition:var(--transition); text-decoration:none;" data-i18n="backHome">← العودة للرئيسية</a>
             </div>
         </div>
     </section>
@@ -114,6 +121,21 @@
         </div>
     </div>
 
+    <a href="https://wa.me/201000000000?text=مرحباً%20أريد%20استشارة%20عقارية" 
+       target="_blank" 
+       class="whatsapp-btn" 
+       id="whatsappBtn">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- ===== السكريبتات المحلية ===== -->
+    <script src="libs/bootstrap.bundle.min.js"></script>
+    <script src="libs/aos/aos.js"></script>
+    <script src="libs/swiper-bundle/swiper-bundle.min.js"></script>
+    <script src="libs/font-awesome/all.min.js"></script>
+    
+    <!-- ===== ملفات المشروع ===== -->
+    <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
 
 </body>
