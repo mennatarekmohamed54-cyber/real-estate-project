@@ -5,12 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>انخفاض الفائدة يزيد الطلب | أورا العقارية</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet" />
+    <!-- ===== المكتبات ===== -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet" />
+
+    <!-- ===== ملفات المشروع ===== -->
+    <link rel="stylesheet" href="../css/variables.css" />
     <link rel="stylesheet" href="../css/style.css" />
 
+    <style>
+        .news-detail {
+            padding: 120px 0 70px;
+        }
+        .news-detail .featured-img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+        .news-detail .date {
+            color: var(--secondary);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        .news-detail h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin: 12px 0 20px;
+        }
+        .news-detail .content {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 2.2;
+        }
+        .news-detail .content p {
+            margin-bottom: 20px;
+        }
+        .btn-back {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 36px;
+            border: none;
+            font-weight: 700;
+            transition: var(--transition);
+            text-decoration: none;
+            margin-top: 30px;
+        }
+        .btn-back:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .news-detail h1 {
+                font-size: 2rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .news-detail h1 {
+                font-size: 1.6rem;
+            }
+            .news-detail .content {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -40,19 +106,18 @@
         </div>
     </header>
 
-    <section style="padding: 120px 0 70px;">
+    <section class="news-detail">
         <div class="container">
-            <img style="width:100%; max-height:500px; object-fit:cover; border-radius:var(--radius); box-shadow:var(--shadow); margin-bottom:30px;" 
-                 src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=90" alt="News" />
-            <div style="color:var(--secondary); font-size:13px; font-weight:600; letter-spacing:1px;">25 أغسطس 2026</div>
-            <h1 style="font-family:'Playfair Display',serif; font-size:2.8rem; margin:12px 0 20px;">انخفاض الفائدة يزيد الطلب على الوحدات السكنية</h1>
-            <div style="color:var(--text-muted); font-size:1.05rem; line-height:2.2;">
+            <img class="featured-img" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=90" alt="News" />
+            <div class="date">25 أغسطس 2026</div>
+            <h1 data-i18n="news1_title">انخفاض الفائدة يزيد الطلب على الوحدات السكنية</h1>
+            <div class="content" data-i18n="news1_content">
                 <p>شهد السوق العقاري المصري خلال الأسبوع الجاري زيادة ملحوظة في الطلب على الوحدات السكنية، بالتزامن مع قرار البنك المركزي بخفض أسعار الفائدة بنسبة 0.5%.</p>
                 <p>وأكد خبراء العقارات أن هذا القرار سيساهم في تنشيط حركة البيع والشراء، خاصة في مشروعات الإسكان المتوسط، مع توقع استمرار الزيادة في الطلب خلال الفترة المقبلة.</p>
                 <p>كما أشاروا إلى أن انخفاض الفائدة يجعل التمويل العقاري أكثر جاذبية للمواطنين، مما يدفع المزيد من الأسر إلى اتخاذ قرار الشراء بدلاً من الإيجار.</p>
                 <p>ومن المتوقع أن تشهد الأسعار استقراراً نسبياً مع زيادة المعروض من الوحدات السكنية في المدن الجديدة.</p>
             </div>
-            <a href="../news.html" style="display:inline-block; padding:12px 36px; background:var(--primary); color:#fff; font-weight:700; transition:var(--transition); text-decoration:none; margin-top:30px;">← العودة للأخبار</a>
+            <a href="../news.html" class="btn-back" data-i18n="backNews">← العودة للأخبار</a>
         </div>
     </section>
 
@@ -60,12 +125,13 @@
         <div class="container"><p data-i18n="copyright">© 2026 أورا العقارية - جميع الحقوق محفوظة</p></div>
     </footer>
 
+    <!-- CONTROL PANEL -->
     <button class="control-toggle" id="controlToggle"><i class="fa-solid fa-sliders"></i></button>
     <div class="control-panel" id="controlPanel">
         <h4><i class="fa-regular fa-pen-to-square"></i> تخصيص المظهر</h4>
         <div class="control-group">
-            <label>اللون الأساسي <span id="primaryVal">#1a1a2e</span></label>
-            <input type="color" id="primaryColor" value="#1a1a2e" />
+            <label>اللون الأساسي <span id="primaryVal">#0f1a2e</span></label>
+            <input type="color" id="primaryColor" value="#0f1a2e" />
         </div>
         <div class="control-group">
             <label>اللون الذهبي <span id="secondaryVal">#c9a87c</span></label>
@@ -81,7 +147,48 @@
         </div>
     </div>
 
+    <!-- WHATSAPP BUTTON -->
+    <a href="https://wa.me/201000000000?text=مرحباً%20أريد%20استشارة%20عقارية" target="_blank" class="whatsapp-btn" id="whatsappBtn">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/translations.js"></script>
     <script src="../js/main.js"></script>
+
+    <script>
+        const extraTranslations = {
+            ar: {
+                news1_title: "انخفاض الفائدة يزيد الطلب على الوحدات السكنية",
+                news1_content: `<p>شهد السوق العقاري المصري خلال الأسبوع الجاري زيادة ملحوظة في الطلب على الوحدات السكنية، بالتزامن مع قرار البنك المركزي بخفض أسعار الفائدة بنسبة 0.5%.</p><p>وأكد خبراء العقارات أن هذا القرار سيساهم في تنشيط حركة البيع والشراء، خاصة في مشروعات الإسكان المتوسط، مع توقع استمرار الزيادة في الطلب خلال الفترة المقبلة.</p><p>كما أشاروا إلى أن انخفاض الفائدة يجعل التمويل العقاري أكثر جاذبية للمواطنين، مما يدفع المزيد من الأسر إلى اتخاذ قرار الشراء بدلاً من الإيجار.</p><p>ومن المتوقع أن تشهد الأسعار استقراراً نسبياً مع زيادة المعروض من الوحدات السكنية في المدن الجديدة.</p>`,
+                backNews: "العودة للأخبار",
+                copyright: "© 2026 أورا العقارية - جميع الحقوق محفوظة"
+            },
+            en: {
+                news1_title: "Interest rate cuts boost demand for residential units",
+                news1_content: `<p>The Egyptian real estate market has witnessed a noticeable increase in demand for residential units this week, coinciding with the Central Bank's decision to cut interest rates by 0.5%.</p><p>Real estate experts confirmed that this decision will contribute to activating the buying and selling movement, especially in medium housing projects, with expectations that the increase in demand will continue in the coming period.</p><p>They also pointed out that lower interest rates make mortgage financing more attractive to citizens, pushing more families to make the decision to buy instead of rent.</p><p>Prices are expected to remain relatively stable with the increase in the supply of residential units in new cities.</p>`,
+                backNews: "Back to News",
+                copyright: "© 2026 Ora Real Estate - All Rights Reserved"
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof translations !== 'undefined') {
+                for (let lang in extraTranslations) {
+                    if (translations[lang]) {
+                        Object.assign(translations[lang], extraTranslations[lang]);
+                    }
+                }
+            }
+            const currentLang = localStorage.getItem('ora-lang') || 'ar';
+            if (typeof applyLanguage === 'function') {
+                applyLanguage(currentLang);
+            }
+        });
+    </script>
 
 </body>
 </html>
