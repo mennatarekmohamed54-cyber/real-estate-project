@@ -1,111 +1,6 @@
-const translations = {
-    ar: {
-        home: "الرئيسية",
-        about: "عن الشركة",
-        properties: "العقارات",
-        news: "الأخبار",
-        gallery: "المعرض",
-        contact: "اتصال",
-        heroBadge: "LUXURY LIVING",
-        heroDiscover: "اكتشف",
-        heroDream: "منزل أحلامك",
-        heroDesc: "أرقى الوحدات السكنية والتجارية في قلب العاصمة، بتصميمات استثنائية وتجربة عقارية لا تُنسى.",
-        heroBtn: "استكشف العقارات",
-        contactBtn: "تواصل معنا",
-        aboutTag: "قصتنا",
-        aboutTitle: "نبني المستقبل بأيدي الخبراء",
-        aboutDesc: "أورا للعقارات هي صرح من النزاهة والجودة، نقدم حلولاً سكنية واستثمارية تلبي تطلعاتكم وتجمع بين التصميم الراقي والموقع المثالي في قلب القاهرة.",
-        years: "سنة خبرة",
-        clients: "عميل سعيد",
-        satisfaction: "% رضا",
-        propertiesTag: "أحدث العروض",
-        propertiesTitle: 'عقارات <span>مميزة</span>',
-        propertiesDesc: "مجموعة مختارة من أفضل الوحدات بأسعار تنافسية وتصميمات فاخرة.",
-        sale: "للبيع",
-        rent: "للإيجار",
-        investment: "استثماري",
-        p1_name: "فيلا البستان",
-        p2_name: "دوبلكس النيل",
-        p3_name: "أرض العاصمة",
-        newsTag: "آخر المستجدات",
-        newsTitle: 'أخبار <span>السوق</span>',
-        news1: "انخفاض الفائدة يزيد الطلب على الوحدات السكنية",
-        news2: "افتتاح مشروع سكني ضخم في العاصمة الإدارية",
-        news3: "دليلك الشامل لتجنب أخطاء شراء أول عقار",
-        galleryTag: "إبداع معماري",
-        galleryTitle: 'معرض <span>المشاريع</span>',
-        contactTag: "تواصل مع خبرائنا",
-        contactTitle: 'احجز استشارتك <span>المجانية</span>',
-        contactDesc: "فريق من المستشارين المتخصصين على أتم الاستعداد لمساعدتك في اختيار العقار المثالي وفقاً لاحتياجاتك.",
-        address: "مصر الجديدة - القاهرة",
-        namePlaceholder: "الاسم بالكامل",
-        emailPlaceholder: "البريد الإلكتروني",
-        messagePlaceholder: "رسالتك",
-        sendBtn: 'إرسال طلب الاستشارة <i class="fa-solid fa-paper-plane"></i>',
-        ctaTag: "اكتشف المزيد",
-        ctaTitle: "هل تبحث عن المزيد من الخيارات؟",
-        ctaDesc: "تصفح قائمة كاملة بجميع العقارات المتاحة لدينا بكل التفاصيل والأسعار.",
-        ctaBtn: "عرض جميع العقارات",
-        allNews: "عرض جميع الأخبار",
-        footerLinks: "روابط",
-        footerSupport: "الدعم",
-        footerContact: "اتصل بنا",
-        copyright: "© 2026 أورا العقارية - جميع الحقوق محفوظة"
-    },
-    en: {
-        home: "Home",
-        about: "About Us",
-        properties: "Properties",
-        news: "News",
-        gallery: "Gallery",
-        contact: "Contact",
-        heroBadge: "LUXURY LIVING",
-        heroDiscover: "Discover",
-        heroDream: "Your Dream Home",
-        heroDesc: "The finest residential and commercial units in the heart of the capital, with exceptional designs and an unforgettable real estate experience.",
-        heroBtn: "Explore Properties",
-        contactBtn: "Contact Us",
-        aboutTag: "OUR STORY",
-        aboutTitle: "Building the Future with Expert Hands",
-        aboutDesc: "Ora Real Estate is a bastion of integrity and quality, providing residential and investment solutions that meet your aspirations, combining elegant design with an ideal location in the heart of Cairo.",
-        years: "Years Experience",
-        clients: "Happy Clients",
-        satisfaction: "% Satisfaction",
-        propertiesTag: "LATEST OFFERS",
-        propertiesTitle: 'Featured <span>Properties</span>',
-        propertiesDesc: "A curated selection of premium properties at competitive prices.",
-        sale: "For Sale",
-        rent: "For Rent",
-        investment: "Investment",
-        p1_name: "Al-Bustan Villa",
-        p2_name: "Nile Duplex",
-        p3_name: "Capital Land",
-        newsTag: "LATEST UPDATES",
-        newsTitle: 'Market <span>News</span>',
-        news1: "Lower interest rates boost demand for residential units",
-        news2: "Major residential project launched in the New Capital",
-        news3: "Your guide to avoiding first property buying mistakes",
-        galleryTag: "ARCHITECTURAL CREATIVITY",
-        galleryTitle: 'Project <span>Gallery</span>',
-        contactTag: "CONTACT OUR EXPERTS",
-        contactTitle: 'Book Your <span>Free Consultation</span>',
-        contactDesc: "Our specialized consultants are ready to help you choose the perfect property based on your needs.",
-        address: "New Cairo - Egypt",
-        namePlaceholder: "Full Name",
-        emailPlaceholder: "Email Address",
-        messagePlaceholder: "Your Message",
-        sendBtn: 'Send Consultation Request <i class="fa-solid fa-paper-plane"></i>',
-        ctaTag: "DISCOVER MORE",
-        ctaTitle: "Looking for more options?",
-        ctaDesc: "Browse the complete list of all available properties with full details and prices.",
-        ctaBtn: "View All Properties",
-        allNews: "View All News",
-        footerLinks: "Links",
-        footerSupport: "Support",
-        footerContact: "Contact",
-        copyright: "© 2026 Ora Real Estate - All Rights Reserved"
-    }
-};
+// =========================================================
+// ⚙️  الملف الرئيسي (main.js)
+// =========================================================
 
 let currentLang = localStorage.getItem('ora-lang') || 'ar';
 
@@ -135,16 +30,20 @@ function setLanguage(lang) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+
+    // LOADER
     const loader = document.getElementById('loader');
     if (loader) {
         setTimeout(() => loader.classList.add('hide'), 700);
     }
 
+    // NAVBAR SCROLL
     window.addEventListener('scroll', function() {
         const nav = document.getElementById('navbar');
         if (nav) nav.classList.toggle('scrolled', window.scrollY > 50);
     });
 
+    // MOBILE MENU
     const menuBtn = document.getElementById('menuBtn');
     const navLinks = document.getElementById('navLinks');
     if (menuBtn && navLinks) {
@@ -154,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // LANGUAGE BUTTON
     const langBtn = document.getElementById('langBtn');
     if (langBtn) {
         langBtn.addEventListener('click', () => {
@@ -161,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // THEME BUTTON
     const themeBtn = document.getElementById('themeBtn');
     if (themeBtn) {
         themeBtn.addEventListener('click', function() {
@@ -171,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // COUNTERS
     const counters = document.querySelectorAll('.counter');
     const counterObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -194,6 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { threshold: 0.5 });
     counters.forEach(c => counterObserver.observe(c));
 
+    // REVEAL
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -203,6 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
+    // CONTROL PANEL
     const toggle = document.getElementById('controlToggle');
     const panel = document.getElementById('controlPanel');
     if (toggle && panel) {
@@ -220,9 +124,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const savedSecondary = localStorage.getItem('ora-secondary');
         const savedBg = localStorage.getItem('ora-bg');
 
-        if (savedPrimary) { primaryInput.value = savedPrimary; primaryVal.textContent = savedPrimary; }
-        if (savedSecondary) { secondaryInput.value = savedSecondary; secondaryVal.textContent = savedSecondary; }
-        if (savedBg) { bgInput.value = savedBg; bgVal.textContent = savedBg; }
+        if (savedPrimary) { primaryInput.value = savedPrimary;
+            primaryVal.textContent = savedPrimary; }
+        if (savedSecondary) { secondaryInput.value = savedSecondary;
+            secondaryVal.textContent = savedSecondary; }
+        if (savedBg) { bgInput.value = savedBg;
+            bgVal.textContent = savedBg; }
 
         function updateColors() {
             document.documentElement.style.setProperty('--primary', primaryInput.value);
@@ -242,13 +149,30 @@ document.addEventListener('DOMContentLoaded', function() {
         bgInput.addEventListener('input', updateColors);
 
         document.getElementById('resetColors').addEventListener('click', () => {
-            primaryInput.value = '#1a1a2e';
+            primaryInput.value = '#0f1a2e';
             secondaryInput.value = '#c9a87c';
             bgInput.value = '#f5f2ed';
             updateColors();
         });
     }
 
+    // SWIPER
+    if (document.querySelector('.swiper')) {
+        new Swiper('.swiper', {
+            loop: true,
+            speed: 1200,
+            effect: 'creative',
+            creativeEffect: {
+                prev: { translate: ['-30%', 0, -200] },
+                next: { translate: ['100%', 0, 0] }
+            },
+            autoplay: { delay: 4500, disableOnInteraction: false },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            pagination: { el: '.swiper-pagination', clickable: true }
+        });
+    }
+
+    // INIT
     applyLanguage(currentLang);
 
     if (localStorage.getItem('ora-theme') === 'dark') {
