@@ -190,4 +190,127 @@
                         <img class="main-image" 
                              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=90" alt="Villa" />
                     </a>
-               
+                </div>
+                <div>
+                    <h1 class="title" data-i18n="prop1_title">فيلا البستان الفاخرة</h1>
+                    <div class="price">$480,000</div>
+                    <div class="meta">
+                        <span><i class="fa-solid fa-bed"></i> <span data-i18n="bedrooms">5 غرف</span></span>
+                        <span><i class="fa-solid fa-bath"></i> <span data-i18n="bathrooms">4 حمامات</span></span>
+                        <span><i class="fa-solid fa-vector-square"></i> 400 م²</span>
+                    </div>
+                    <div class="meta">
+                        <span><i class="fa-solid fa-location-dot"></i> <span data-i18n="location1">التجمع الخامس، القاهرة</span></span>
+                        <span><i class="fa-solid fa-tag"></i> <span data-i18n="sale">للبيع</span></span>
+                    </div>
+                    <p class="description" data-i18n="prop1_desc">فيلا عصرية فاخرة بحديقة خاصة ومسبح لا نهائي. تتميز بواجهة زجاجية وتشطيب سوبر لوكس. تقع في قلب التجمع الخامس قريبة من المدارس والجامعات.</p>
+                    <div class="specs">
+                        <strong data-i18n="specs">المواصفات:</strong><br />
+                        <span data-i18n="specs1">• مساحة الأرض: 600 م²</span><br />
+                        <span data-i18n="specs2">• دورين + روف</span><br />
+                        <span data-i18n="specs3">• نظام تقسيط مرن</span>
+                    </div>
+                    <div class="buttons">
+                        <a href="../index.html#contact" class="btn-contact" data-i18n="contact_advisor">تواصل مع المستشار</a>
+                        <a href="../index.html#properties" class="btn-back">← <span data-i18n="back_list">العودة للقائمة</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background:#0d0d0d; color:rgba(255,255,255,0.4); padding:24px 0; text-align:center;">
+        <div class="container"><p data-i18n="copyright">© 2026 أورا العقارية - جميع الحقوق محفوظة</p></div>
+    </footer>
+
+    <!-- CONTROL PANEL -->
+    <button class="control-toggle" id="controlToggle"><i class="fa-solid fa-sliders"></i></button>
+    <div class="control-panel" id="controlPanel">
+        <h4><i class="fa-regular fa-pen-to-square"></i> تخصيص المظهر</h4>
+        <div class="control-group">
+            <label>اللون الأساسي <span id="primaryVal">#1a1a2e</span></label>
+            <input type="color" id="primaryColor" value="#1a1a2e" />
+        </div>
+        <div class="control-group">
+            <label>اللون الذهبي <span id="secondaryVal">#c9a87c</span></label>
+            <input type="color" id="secondaryColor" value="#c9a87c" />
+        </div>
+        <div class="control-group">
+            <label>الخلفية <span id="bgVal">#f5f2ed</span></label>
+            <input type="color" id="bgColor" value="#f5f2ed" />
+        </div>
+        <div class="panel-btns">
+            <button class="reset-btn" id="resetColors">إعادة ضبط</button>
+            <button class="close-btn" id="closePanel">إغلاق</button>
+        </div>
+    </div>
+
+    <!-- WHATSAPP BUTTON -->
+    <a href="https://wa.me/201000000000?text=مرحباً%20أريد%20استشارة%20عقارية" 
+       target="_blank" 
+       class="whatsapp-btn" 
+       id="whatsappBtn">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- ===== السكريبتات المحلية ===== -->
+    <script src="../libs/bootstrap.bundle.min.js"></script>
+    <script src="../libs/aos/aos.js"></script>
+    <script src="../libs/swiper-bundle/swiper-bundle.min.js"></script>
+    <script src="../libs/font-awesome/all.min.js"></script>
+    
+    <!-- ===== ملفات المشروع ===== -->
+    <script src="../js/translations.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script>
+        const extraTranslations = {
+            ar: {
+                prop1_title: "فيلا البستان الفاخرة",
+                bedrooms: "5 غرف",
+                bathrooms: "4 حمامات",
+                location1: "التجمع الخامس، القاهرة",
+                sale: "للبيع",
+                prop1_desc: "فيلا عصرية فاخرة بحديقة خاصة ومسبح لا نهائي. تتميز بواجهة زجاجية وتشطيب سوبر لوكس. تقع في قلب التجمع الخامس قريبة من المدارس والجامعات.",
+                specs: "المواصفات:",
+                specs1: "• مساحة الأرض: 600 م²",
+                specs2: "• دورين + روف",
+                specs3: "• نظام تقسيط مرن",
+                contact_advisor: "تواصل مع المستشار",
+                back_list: "العودة للقائمة",
+                copyright: "© 2026 أورا العقارية - جميع الحقوق محفوظة"
+            },
+            en: {
+                prop1_title: "Al-Bustan Luxury Villa",
+                bedrooms: "5 Bedrooms",
+                bathrooms: "4 Bathrooms",
+                location1: "Fifth Settlement, Cairo",
+                sale: "For Sale",
+                prop1_desc: "A modern luxury villa with a private garden and an infinity pool. It features a glass facade and super luxury finishing. Located in the heart of the Fifth Settlement, close to schools and universities.",
+                specs: "Specifications:",
+                specs1: "• Land area: 600 m²",
+                specs2: "• Two floors + roof",
+                specs3: "• Flexible installment plan",
+                contact_advisor: "Contact Advisor",
+                back_list: "Back to List",
+                copyright: "© 2026 Ora Real Estate - All Rights Reserved"
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof translations !== 'undefined') {
+                for (let lang in extraTranslations) {
+                    if (translations[lang]) {
+                        Object.assign(translations[lang], extraTranslations[lang]);
+                    }
+                }
+            }
+            const currentLang = localStorage.getItem('ora-lang') || 'ar';
+            if (typeof applyLanguage === 'function') {
+                applyLanguage(currentLang);
+            }
+        });
+    </script>
+
+</body>
+</html>
