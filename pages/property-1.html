@@ -5,12 +5,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>فيلا البستان | أورا العقارية</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ===== المكتبات المحلية ===== -->
+    <link rel="stylesheet" href="../libs/bootstrap.min.css" />
+    <link rel="stylesheet" href="../libs/font-awesome/all.min.css" />
+    <link rel="stylesheet" href="../libs/swiper-bundle/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../libs/aos/aos.css" />
+    
+    <!-- ===== Google Fonts ===== -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    
+    <!-- ===== ملفات المشروع ===== -->
+    <link rel="stylesheet" href="../css/variables.css" />
     <link rel="stylesheet" href="../css/style.css" />
 
+    <style>
+        /* تنسيقات إضافية خاصة بالصفحة */
+        .property-detail {
+            padding: 120px 0 70px;
+        }
+        .property-detail .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+        .property-detail .grid .main-image {
+            width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .property-detail .grid .main-image:hover {
+            box-shadow: var(--shadow-hover);
+            transform: scale(1.01);
+        }
+        .property-detail .grid .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+        }
+        .property-detail .grid .price {
+            font-size: 2rem;
+            color: var(--secondary);
+            font-weight: 700;
+            margin: 12px 0;
+        }
+        .property-detail .grid .meta {
+            display: flex;
+            gap: 24px;
+            color: var(--text-muted);
+            margin: 16px 0;
+            flex-wrap: wrap;
+        }
+        .property-detail .grid .meta i {
+            color: var(--secondary);
+            margin-left: 5px;
+        }
+        .property-detail .grid .description {
+            color: var(--text-muted);
+            line-height: 2;
+            margin: 16px 0;
+            font-size: 1.05rem;
+        }
+        .property-detail .grid .specs {
+            color: var(--text-muted);
+            line-height: 2;
+            margin: 16px 0;
+            font-size: 1.05rem;
+        }
+        .property-detail .grid .specs strong {
+            color: var(--text);
+        }
+        .property-detail .grid .buttons {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .property-detail .grid .buttons .btn-contact {
+            display: inline-block;
+            background: var(--secondary);
+            color: #fff;
+            padding: 12px 36px;
+            font-weight: 700;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        .property-detail .grid .buttons .btn-contact:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        .property-detail .grid .buttons .btn-back {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 36px;
+            font-weight: 700;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        .property-detail .grid .buttons .btn-back:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        /* ===== ريسبونسيف ===== */
+        @media (max-width: 992px) {
+            .property-detail .grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .property-detail .grid .title {
+                font-size: 2.2rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .property-detail {
+                padding: 100px 0 50px;
+            }
+            .property-detail .grid .title {
+                font-size: 1.8rem;
+            }
+            .property-detail .grid .price {
+                font-size: 1.6rem;
+            }
+            .property-detail .grid .meta {
+                gap: 14px;
+                font-size: 0.9rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .property-detail .grid .title {
+                font-size: 1.5rem;
+            }
+            .property-detail .grid .price {
+                font-size: 1.3rem;
+            }
+            .property-detail .grid .buttons {
+                flex-direction: column;
+            }
+            .property-detail .grid .buttons a {
+                text-align: center;
+                width: 100%;
+            }
+            .property-detail .grid .meta {
+                gap: 10px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -40,69 +182,12 @@
         </div>
     </header>
 
-    <section style="padding: 120px 0 70px;">
+    <section class="property-detail">
         <div class="container">
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:start;">
+            <div class="grid">
                 <div>
                     <a href="gallery-1.html" style="display:block;">
-                        <img style="width:100%; border-radius:var(--radius); box-shadow:var(--shadow);" 
+                        <img class="main-image" 
                              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=90" alt="Villa" />
                     </a>
-                </div>
-                <div>
-                    <h1 style="font-family:'Playfair Display',serif; font-size:2.8rem;">فيلا البستان الفاخرة</h1>
-                    <div style="font-size:2rem; color:var(--secondary); font-weight:700; margin:12px 0;">$480,000</div>
-                    <div style="display:flex; gap:24px; color:var(--text-muted); margin:16px 0; flex-wrap:wrap;">
-                        <span><i class="fa-solid fa-bed"></i> 5 غرف</span>
-                        <span><i class="fa-solid fa-bath"></i> 4 حمامات</span>
-                        <span><i class="fa-solid fa-vector-square"></i> 400 م²</span>
-                    </div>
-                    <div style="display:flex; gap:24px; color:var(--text-muted); margin:16px 0; flex-wrap:wrap;">
-                        <span><i class="fa-solid fa-location-dot"></i> التجمع الخامس، القاهرة</span>
-                        <span><i class="fa-solid fa-tag"></i> للبيع</span>
-                    </div>
-                    <p style="color:var(--text-muted); line-height:2; margin:16px 0; font-size:1.05rem;">فيلا عصرية فاخرة بحديقة خاصة ومسبح لا نهائي. تتميز بواجهة زجاجية وتشطيب سوبر لوكس. تقع في قلب التجمع الخامس قريبة من المدارس والجامعات.</p>
-                    <p style="color:var(--text-muted); line-height:2; margin:16px 0; font-size:1.05rem;">
-                        <strong>المواصفات:</strong><br />
-                        • مساحة الأرض: 600 م²<br />
-                        • دورين + روف<br />
-                        • نظام تقسيط مرن
-                    </p>
-                    <div style="margin-top:30px;">
-                        <a href="../index.html#contact" style="display:inline-block; background:var(--secondary); color:#fff; padding:12px 36px; font-weight:700; transition:var(--transition); text-decoration:none; margin-left:10px;">تواصل مع المستشار</a>
-                        <a href="../index.html#properties" style="display:inline-block; background:var(--primary); color:#fff; padding:12px 36px; font-weight:700; transition:var(--transition); text-decoration:none;">← العودة للقائمة</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer style="background:#0d0d0d; color:rgba(255,255,255,0.4); padding:24px 0; text-align:center;">
-        <div class="container"><p data-i18n="copyright">© 2026 أورا العقارية - جميع الحقوق محفوظة</p></div>
-    </footer>
-
-    <button class="control-toggle" id="controlToggle"><i class="fa-solid fa-sliders"></i></button>
-    <div class="control-panel" id="controlPanel">
-        <h4><i class="fa-regular fa-pen-to-square"></i> تخصيص المظهر</h4>
-        <div class="control-group">
-            <label>اللون الأساسي <span id="primaryVal">#1a1a2e</span></label>
-            <input type="color" id="primaryColor" value="#1a1a2e" />
-        </div>
-        <div class="control-group">
-            <label>اللون الذهبي <span id="secondaryVal">#c9a87c</span></label>
-            <input type="color" id="secondaryColor" value="#c9a87c" />
-        </div>
-        <div class="control-group">
-            <label>الخلفية <span id="bgVal">#f5f2ed</span></label>
-            <input type="color" id="bgColor" value="#f5f2ed" />
-        </div>
-        <div class="panel-btns">
-            <button class="reset-btn" id="resetColors">إعادة ضبط</button>
-            <button class="close-btn" id="closePanel">إغلاق</button>
-        </div>
-    </div>
-
-    <script src="../js/main.js"></script>
-
-</body>
-</html>
+               
