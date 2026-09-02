@@ -5,15 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>أورا العقارية | الفخامة الخالدة</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- =============================================
+         المكتبات المحلية (Local Libraries)
+         ============================================= -->
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="libs/bootstrap.min.css" />
+    
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="libs/font-awesome/all.min.css" />
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="libs/swiper-bundle/swiper-bundle.min.css" />
+    
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="libs/aos/aos.css" />
+    
+    <!-- =============================================
+         Google Fonts (CDN - احتياطي)
+         ============================================= -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    
+    <!-- =============================================
+         ملفات المشروع
+         ============================================= -->
+    <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/style.css" />
 
 </head>
 <body>
 
+    <!-- LOADER -->
     <div class="loader" id="loader">
         <div>
             <div class="loader-logo">ORA<span>.</span></div>
@@ -21,6 +43,7 @@
         </div>
     </div>
 
+    <!-- NAVBAR -->
     <header class="navbar" id="navbar">
         <div class="nav-inner">
             <a href="index.html" class="logo">ORA<span>.</span></a>
@@ -40,6 +63,7 @@
         </div>
     </header>
 
+    <!-- HERO -->
     <section class="hero" id="home">
         <img class="hero-bg" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1920&q=90" alt="Hero" />
         <div class="hero-overlay"></div>
@@ -62,6 +86,7 @@
         </div>
     </section>
 
+    <!-- ABOUT -->
     <section class="section" id="about">
         <div class="container">
             <div class="about-grid">
@@ -91,6 +116,7 @@
         </div>
     </section>
 
+    <!-- PROPERTIES -->
     <section class="section properties" id="properties">
         <div class="container">
             <div class="section-head reveal">
@@ -156,6 +182,7 @@
         </div>
     </section>
 
+    <!-- WHY US -->
     <section class="section" style="background: var(--bg);">
         <div class="container">
             <div class="section-head reveal">
@@ -187,6 +214,7 @@
         </div>
     </section>
 
+    <!-- GALLERY -->
     <section class="section" id="gallery">
         <div class="container">
             <div class="section-head reveal">
@@ -222,6 +250,7 @@
         </div>
     </section>
 
+    <!-- NEWS -->
     <section class="section" id="news" style="background: var(--bg);">
         <div class="container">
             <div class="section-head reveal">
@@ -266,6 +295,7 @@
         </div>
     </section>
 
+    <!-- CONTACT -->
     <section class="section" id="contact">
         <div class="container">
             <div class="contact-grid">
@@ -296,6 +326,7 @@
         </div>
     </section>
 
+    <!-- CTA -->
     <section class="cta-section">
         <div class="container">
             <span class="section-tag" style="color:var(--secondary);" data-i18n="ctaTag">اكتشف المزيد</span>
@@ -305,6 +336,7 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -339,6 +371,7 @@
         </div>
     </footer>
 
+    <!-- CONTROL PANEL -->
     <button class="control-toggle" id="controlToggle"><i class="fa-solid fa-sliders"></i></button>
     <div class="control-panel" id="controlPanel">
         <h4><i class="fa-regular fa-pen-to-square"></i> تخصيص المظهر</h4>
@@ -360,8 +393,35 @@
         </div>
     </div>
 
+    <!-- WHATSAPP BUTTON -->
+    <a href="https://wa.me/201000000000?text=مرحباً%20أريد%20استشارة%20عقارية" 
+       target="_blank" 
+       class="whatsapp-btn" 
+       id="whatsappBtn">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- =============================================
+         السكريبتات المحلية
+         ============================================= -->
+    
+    <!-- Bootstrap JS -->
+    <script src="libs/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS JS -->
+    <script src="libs/aos/aos.js"></script>
+    
+    <!-- Swiper JS -->
+    <script src="libs/swiper-bundle/swiper-bundle.min.js"></script>
+    
+    <!-- Font Awesome JS -->
+    <script src="libs/font-awesome/all.min.js"></script>
+    
+    <!-- =============================================
+         ملفات المشروع
+         ============================================= -->
+    <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
 
 </body>
 </html>
-   
